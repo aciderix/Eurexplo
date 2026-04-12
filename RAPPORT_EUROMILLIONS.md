@@ -1,4 +1,4 @@
-# Euromillions — Rapport de Recherche Exploratoire (v2)
+# Euromillions — Rapport de Recherche Exploratoire (v3 — Oracle)
 
 **Date :** 2026-04-12
 **Source :** `euromillions-api` (pedro-mealha) via API `https://euromillions.api.pedromealha.dev`
@@ -285,21 +285,124 @@ def generate_star_pairs(top_s1: list[int], top_s2: list[int]) -> list[tuple[int,
 
 ---
 
-## 8. Pistes Futures Non Explorées
+## 8. Exploration v3 — Approches Folles et Oracle
 
-1. **Machine-specific analysis** : identifier les changements de machine via changepoint detection
-2. **Étoiles lucky stars vs regular** : certains pays ont des tirages légèrement différents
-3. **Analyse des prix** : le montant des gains influence-t-il le tirage suivant ? (indirectement via nombre de joueurs)
-4. **Analyse fréquentielle fine** : les pré-2011 vendredi seulement → machine identique mais cadence différente
-5. **Prédiction conditionnelle** : si star1=X, quelle star2 est la plus probable ?
-6. **Transfer learning** : appliquer le même framework à d'autres loteries pour vérifier si le biais étoiles est universel
+### 8.1 Approches testées sur les NUMEROS (tous echouent)
+
+| Approche | Resultat | Verdict |
+|----------|----------|---------|
+| Phase lunaire | ANOVA p=0.84 | Aucun effet |
+| Fibonacci/Primes count | autocorr < 0.03 | Nul |
+| Golden ratio dans gaps | distance phi ≈ null model | Nul |
+| Effet jackpot size sur nums | 1 seul num z>2 sur 50 | Bruit |
+| Winner effect sur nums | p=0.32 | Nul |
+| Strategie exclusion | 90.1% vs 90.0% baseline | Nul |
+| Zones/decades autocorr | tous \|r\| < 0.06 | Nul |
+| Saisonnier | ANOVA p=0.86 | Nul |
+| Position-specific rolling | z≈0 vs null iid marginale | **Artefact** |
+| Takens embedding sum | 50.1%, z=+0.1 | Nul |
+| Algorithme genetique | test=13.0%, pas mieux que rolling | Nul |
+| Collatz transformation | autocorr < 0.05 | Nul |
+| Regression sinusoidale | R²=0.003 | Nul |
+| Champernowne cross-draw | r=-0.018 | Nul |
+| Numerologie digit sum | Pas de pattern | Nul |
+| Pi encoding | 10.3% des tirages, pas predictif | Nul |
+| Vendredi 13 | star2=8.03 ≈ global 8.15 | Nul |
+
+**Conclusion brutale** : Les numeros sont un mur. 20+ approches, 0 signal survivant a la falsification.
+
+### 8.2 Nouvelles decouvertes sur les ETOILES
+
+| Decouverte | Detail |
+|------------|--------|
+| **P(star2\|star1)** | Quand star1=8, P(star2=9) = **33%**. Prediction conditionnelle: 18.7% (z=+15.7) |
+| **Paire proximity bias** | (11,12) z=+11.9, (1,2) z=+10.8 → biais mecanique |
+| **Star1 + star2 top-3** | Au moins 1 correcte: **77.6%** (z=+7.1 vs null iid meme marginale) |
+| **Pattern matching (10-NN)** | star2: 13.4% (z=+7.9) |
+| **Modular arithmetic** | star2 mod 6: z=+4.7 vs null marginal |
+| **Winner effect** | star2 apres winner = 7.94 vs 8.21 apres loss (p=0.049) |
+
+### 8.3 Decomposition honnete : edge REEL vs TRIVIAL
+
+Le rolling mode fonctionne. Mais **combien vient du vrai signal temporal** vs **juste le biais marginal** ?
+
+| Composant | Accuracy reelle | Null (iid meme marginale) | Edge reel | z vs null |
+|-----------|----------------|---------------------------|-----------|-----------|
+| star1 top-3 | 48.3% | 48.7% | **-0.3pp** | -0.2 |
+| **star2 top-3** | **45.7%** | **38.1%** | **+7.6pp** | **+5.5** |
+| pos0 top-3 (nums) | 23.5% | 23.5% | 0.0pp | 0.0 |
+| pos4 top-3 (nums) | 26.2% | 25.3% | +1.0pp | +0.8 |
+
+**Revelation** : Star1 n'a PAS d'edge temporel reel ! Son 48.3% vient entierement de sa distribution desequilibree (concentree sur 1-5). Seule **star2** a un vrai signal temporel (+7.6pp, z=+5.5).
+
+### 8.4 La Formule Oracle definitive
+
+```python
+from collections import Counter
+
+def oracle_eurexplo(star1_history, star2_history, window=100):
+    """
+    L'Oracle Eurexplo — formule composite a >50%.
+    
+    Prediction: "Au moins 1 etoile dans son top-3 rolling"
+    Accuracy: 77.6% (dont ~68% structure triviale + ~10pp edge reel)
+    z-score vs null iid: +7.1
+    
+    Pour les numeros: aucun edge. Choisir aleatoirement.
+    """
+    top3_s1 = [c[0] for c in Counter(star1_history[-window:]).most_common(3)]
+    top3_s2 = [c[0] for c in Counter(star2_history[-window:]).most_common(3)]
+    
+    # Prediction conditionnelle P(star2|star1)
+    # Pour chaque star1 candidate, trouver les star2 les plus probables
+    conditional_pairs = []
+    for s1_cand in top3_s1:
+        # Chercher les draws recents ou star1 == s1_cand
+        cond_s2 = [s2 for s1, s2 in zip(star1_history[-500:], star2_history[-500:]) 
+                   if s1 == s1_cand]
+        if len(cond_s2) >= 5:
+            best_s2 = Counter(cond_s2).most_common(2)
+            for s2_val, _ in best_s2:
+                if s1_cand < s2_val:
+                    conditional_pairs.append((s1_cand, s2_val))
+    
+    return {
+        'star1_candidates': top3_s1,
+        'star2_candidates': top3_s2,
+        'best_pairs': conditional_pairs[:9],
+        'confidence': '77.6% qu\'au moins 1 etoile soit dans les candidates',
+        'numbers': 'Aleatoire — aucun edge detecte sur 20+ methodes testees'
+    }
+```
+
+### 8.5 Tableau de bord de confiance
+
+| Metrique | Valeur | Baseline | Edge | Fiabilite |
+|----------|--------|----------|------|-----------|
+| Au moins 1 star top-3 | **77.6%** | 43.8% | 1.77x | z=+7.1 vs null |
+| Star2 mode exact | **16.5%** | 8.3% | 2.0x | z=+5.5 vs null |
+| Star1 mode exact | 18.3% | 8.3% | 2.2x | z=-0.2 vs null (trivial!) |
+| Paire exacte mode | 1.8% | 0.69% | 2.6x | z=+5.7 |
+| Top-9 paires | 16.5% | 13.6% | 1.21x | z=+3.4 |
+| >=2 nums dans pool 25 | 82.0% | 82.6% | 0.99x | Pas d'edge |
+| Composite score>=3 | 67.3% | ~60% | ~1.12x | Mixte |
+
+### 8.6 Approches detruites (mais amusantes)
+
+- **Phase lunaire** : la Lune se fiche de l'Euromillions (p=0.84)
+- **Vendredi 13** : 40 tirages, star2=8.03 ≈ moyenne (pas maudit, pas beni)
+- **Fibonacci** : 0.795 fibs/tirage vs 0.800 theorique (parfait hasard)
+- **Tirages quasi-identiques** : les plus proches (distance L1=2) sont le #143 et #155
+- **Regression sinusoidale** : R²=0.003 — star2 n'est pas periodique
+- **Algorithme genetique** : 100 generations, evolue de 10% a 16% — ne bat pas le rolling mode
 
 ---
 
 ## 9. Limites
 
-- **Numéros non prédictibles** — l'edge est UNIQUEMENT sur les étoiles
-- **Edge limité** — même avec 2× le baseline, la probabilité reste faible
-- **Risque de changement** — un nouveau matériel peut modifier la distribution
-- **Pas de jackpot** — pour gagner le jackpot (5+2), il faut les 5 numéros justes (non prédictibles)
-- **Utilité pratique** — l'edge sur les étoiles améliore les rangs de gain inférieurs, pas le jackpot
+- **Numeros : mur infranchissable** — 20+ methodes testees (de la plus classique a la plus absurde), 0 signal. Le tirage de 5 numeros parmi 50 est indistinguable du hasard parfait.
+- **Star1 : edge illusoire** — le 18.3% d'accuracy vient de la distribution biaisee, pas d'une structure temporelle. Un modele iid avec la meme marginale fait aussi bien.
+- **Star2 : seul vrai signal temporel** — +7.6pp d'edge reel vs null iid, confirme par compression (z=-6.18) et autocorrelation multi-lag.
+- **Edge limite** — meme avec le meilleur Oracle, la probabilite de toucher le jackpot (5+2) reste ~1/139M.
+- **Risque de changement** — le changement de 2016 (star12) montre que le systeme evolue.
+- **Utilite reelle** — l'edge ameliore les rangs de gain inferieurs (2+1 star = ~13EUR) mais ne change pas la donne sur les gains majeurs.
