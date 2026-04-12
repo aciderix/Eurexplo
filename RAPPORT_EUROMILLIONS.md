@@ -1,4 +1,4 @@
-# Euromillions — Rapport de Recherche Exploratoire (v3 — Oracle)
+# Euromillions — Rapport de Recherche Exploratoire (v4 — Falsification Totale)
 
 **Date :** 2026-04-12
 **Source :** `euromillions-api` (pedro-mealha) via API `https://euromillions.api.pedromealha.dev`
@@ -503,3 +503,193 @@ Dernier tirage: #1936 (2026-04-10) → [10, 13, 14, 38, 41] + [6, 9]
 - Confiance etoiles: **77.6%** qu'au moins 1 soit dans le top-3 rolling
 - Confiance numeros: identique au hasard
 - Regime actuel: star2 elevee (mode=12, top: 10, 12, 9)
+
+---
+
+## 13. Exploration v4 — Falsification Totale (40+ methodes)
+
+### 13.1 Changements de format detectes
+
+| Ere | Tirages | Format Etoiles | Freq. tirages |
+|-----|---------|----------------|---------------|
+| Era 1 | 0-380 (2004-2011) | Stars 1-9 | Vendredi seul |
+| Era 2 | 381-939 (2011-2016) | Stars 1-11 | Mardi + Vendredi |
+| Era 3 | 940-1935 (2016-2026) | Stars 1-12 | Mardi + Vendredi |
+
+**Decouverte critique :** De nombreux "signaux" detectes sur le dataset complet sont des artefacts de ces changements de format. Toutes les analyses de cette session ont ete refaites sur l'Era 3 seule (996 tirages, format stable).
+
+### 13.2 Signaux detruits — "Pensees de physicien"
+
+| Approche | Signal brut | Apres falsification | Verdict |
+|----------|-------------|---------------------|---------|
+| Displacement autocorrelation | pos0: r=+0.25, pos4: r=+0.30 | z∈[-0.86, +0.44] vs null iid | **ARTEFACT** (regression vers la moyenne des order stats) |
+| FFT periodicites numeros | Num13 z=+10.76 | Global z=0.14, p=0.45 (era 3) | **ARTEFACT** (format changes + multiple testing) |
+| FFT periodicites etoiles | Star12 z=+20.76 | Global z=-0.81, p=0.78 (era 3) | **ARTEFACT** (100% du a l'introduction star 10-12) |
+| Systeme dynamique NN (Takens) | ratio NN/naive = 0.78 | z=+0.38 vs null shuffled | **ARTEFACT** (regression vers la moyenne dans l'embedding) |
+| Momentum espace des tirages | cos(angle) = -0.45 | z=-0.85, p=0.22 | **MORT** |
+| Spread numbers autocorr | r=-0.013 | z=-0.54, p=0.29 | **MORT** |
+| Geometrie circulaire | Aucune structure | — | **MORT** |
+| Decomposition binaire | Aucune structure | — | **MORT** |
+| Patterns d'absence | Aucune structure | — | **MORT** |
+| NMF facteurs latents | Pas d'autocorrelation | — | **MORT** |
+
+### 13.3 Signaux detruits — Approches non-conventionnelles
+
+| Approche | Resultat | Verdict |
+|----------|----------|---------|
+| Resonance num_sum(t) → star2(t+1) | r=0.049, z=2.15 global MAIS z=0.90, p=0.18 en era 3 | **ARTEFACT** format |
+| Hot hand / Gambler (numeros) | P(appear\|drought=d) = 10% ∀d | **MORT** — parfaitement iid |
+| Pattern matching binaire (stars) | 32.2% vs 33.3% baseline | **MORT** |
+| Conditional patterns (centroid, parity, consec.) | Tous r < 0.03 | **MORT** |
+| Residus modulaires (mod 3,5,7,11) | Consecutive matches = expected | **MORT** |
+| Parite sum autocorrelation | r=-0.023 | **MORT** |
+| Digit sum autocorrelation | r=-0.012, z=-0.51 | **MORT** |
+| Coefficients polynomiaux (Vieta) | Tous r < 0.05 | **MORT** |
+| Compression Kolmogorov | ratio = constant (donnees trop courtes) | **MORT** |
+| Co-occurrence numeros (global) | variance z=1.05, p=0.14 | **MORT** |
+| Jour de semaine (era 3) | star2 Tue=8.60 vs Fri=8.83, p=0.18 | **MORT** |
+| Phase lunaire | p=0.846 | **MORT** |
+| Fibonacci distances | z=-1.91 (MOINS que random) | **MORT** |
+| Jackpot → next draw | Differences non significatives | **MORT** |
+| Sequence matching | 34.0% vs rolling 34.9% | **MORT** |
+
+### 13.4 UN signal survivant (stars)
+
+**Star drought ≥ 20 tirages → P(apparition) = 32%**
+
+| Metrique | Valeur |
+|----------|--------|
+| Observe | P(appear\|drought=20) = 0.321 |
+| Null (permutation) | mean = 0.167, std = 0.053 |
+| z-score | **+2.93** |
+| p-value | **0.0013** |
+| p corrigee (Bonferroni, 8 seuils testes) | **0.010** |
+
+Quand une etoile n'est pas apparue depuis 20+ tirages, elle a ~2x plus de chances de revenir. Signal statistiquement reel, mais **pratiquement inutile** : n=53 cas seulement, et le rolling mode capture deja cette information implicitement.
+
+### 13.5 Star gap autocorrelation (marginal)
+
+| Metrique | Valeur |
+|----------|--------|
+| Gap autocorrelation lag-1 | r = 0.043 |
+| z vs null | +1.93 |
+| p-value | 0.027 |
+
+Le gap entre star1 et star2 a une micro-autocorrelation positive. Trop faible pour etre exploitable (r < 0.05).
+
+### 13.6 ML combine : echec
+
+GradientBoosting avec 57 features (rolling frequencies, recency, gaps, centroids, spreads, parity) sur era 3 :
+
+| Predicteur | Star1 | Star2 | Any star |
+|------------|-------|-------|----------|
+| ML (57 features) | 14.5% | 20.7% | 32.3% |
+| Rolling mode simple | 17.3% | 19.4% | 35.4% |
+| Random | 16.7% | 16.7% | 33.3% |
+
+**Le ML fait PIRE que le rolling mode.** Les 57 features ne contiennent aucune information supplementaire. Le rolling mode est deja optimal.
+
+### 13.7 Prediction par position : pas d'avantage
+
+| Approche | Any number correct | Baseline random |
+|----------|--------------------|-----------------|
+| Par position (rolling mode) | 42.8% | 42.5% |
+| Sans position (top-5 global) | 44.1% | 42.3% |
+| Hybride position+global | 40.2% | 42.5% |
+
+La prediction par position n'apporte rien pour les numeros. Le top-5 global est marginalement mieux (+1.8pp).
+
+### 13.8 Analyse de couverture — Le "50%"
+
+En augmentant le nombre de predictions, on peut atteindre n'importe quel seuil :
+
+| N numeros predits | Notre hit rate | Random | Edge |
+|-------------------|---------------|--------|------|
+| 5 | 44.1% | 42.3% | +1.8pp |
+| **6** | **50.8%** | **48.7%** | **+2.1pp** |
+| 7 | 55.7% | 54.6% | +1.1pp |
+| 10 | 70.0% | 68.9% | +1.1pp |
+
+| N etoiles predites | Notre hit rate | Random | Edge |
+|---------------------|---------------|--------|------|
+| 2 | 34.7% | 31.8% | +2.9pp |
+| 3 | 47.3% | 45.5% | +1.8pp |
+| 4 | 58.9% | 57.6% | +1.3pp |
+
+**Grille 7 numeros + 3 etoiles :**
+- Au moins 1 numero correct : **55.7%** (random: 54.6%)
+- Au moins 1 etoile correcte : **47.3%** (random: 45.5%)
+- Au moins 1 element : **76.8%** (random: 75.2%)
+
+**L'edge reel est de ~2pp quelle que soit la taille de la prediction.** Le "50%" s'atteint en augmentant la couverture, pas par un vrai signal predictif.
+
+### 13.9 Oracle analysis — Plafond theorique
+
+| Strategie | Avg correct / 5 nums |
+|-----------|---------------------|
+| Oracle (connait les 50 prochains tirages) | 0.93 / 5 |
+| Notre predicteur | 0.52 / 5 |
+| Random | 0.50 / 5 |
+
+Meme avec une connaissance PARFAITE du futur, un predicteur base sur les frequences ne peut atteindre que 0.93/5 — parce que les numeros sont trop uniformes pour etre previsibles.
+
+### 13.10 Position des etoiles dans la machine
+
+La note "pensee machine" : les etoiles sont triees (star1=min, star2=max). Chaque position a sa propre distribution :
+- Star1 : concentree sur 1-5 (bias mecanique fort)
+- Star2 : concentree sur 7-12 (complementaire)
+- Le biais star1 est TRIVIAL (structure marginale pure, z=-0.2 vs null iid)
+- Seul star2 a un vrai signal TEMPOREL (+7.6pp, z=+5.5)
+
+---
+
+## 14. Sur l'entrainement d'un modele IA
+
+### Pourquoi ca ne marchera pas
+
+1. **Pas de signal a apprendre** : 40+ methodes testees, le seul signal reel est le rolling mode star2 (+2-3pp). Un reseau de neurones ne peut pas apprendre ce qui n'existe pas.
+
+2. **Overfitting garanti** : ~2000 tirages est microscopique pour du deep learning. Le modele memorisera du bruit (95% train, 16% test).
+
+3. **On l'a teste** : GradientBoosting avec 57 features fait PIRE que le simple rolling mode. Plus de complexite = plus d'overfitting = pire resultat.
+
+4. **Combiner d'autres loteries ?** Chaque loterie a des machines differentes, des plages differentes (Powerball: 1-69, Loto FR: 1-49). Il n'y a pas de "physique universelle des loteries" transferable.
+
+5. **Le probleme est physique** : les boules sont brassees mecaniquement. Aucune quantite de compute ne cree un signal la ou la physique n'en laisse pas.
+
+### Si on voulait quand meme essayer (pour le fun)
+
+- LSTM ou Transformer sur sequences de tirages
+- Prediction : overfitting massif garanti
+- Le modele convergera vers... le rolling mode (la seule structure presente)
+
+---
+
+## 15. Conclusion Definitive (v4)
+
+### Ce qu'on sait avec certitude
+
+1. **Les numeros sont parfaitement aleatoires.** 40+ methodes de la plus classique (chi2) a la plus folle (phase lunaire, Fibonacci, systeme dynamique de Takens, hash modulaire), toutes donnent z < 2 vs null iid. Zero signal.
+
+2. **Star2 a un vrai signal temporel.** +7.6pp au-dessus du null iid (z=+5.5). Le rolling mode de window 20-100 capture ce signal optimalement. Rien de plus complexe ne fait mieux.
+
+3. **Star1 est un mirage.** Sa "predictibilite" (18.3%) vient entierement de sa distribution biaisee. Pas de signal temporel.
+
+4. **L'edge total est de ~2-3pp** sur la composante etoiles. Cela se traduit par un ROI backtest de ~25% (vs ~20% aleatoire) — reel mais insuffisant pour etre profitable (chaque grille coute 2.50 EUR, gain moyen ~0.50 EUR).
+
+5. **Le seul nouveau signal survivant** est le drought ≥ 20 tirages sur les etoiles (z=+2.93), mais il est trop rare pour etre exploitable et deja capture par le rolling mode.
+
+### La formule la plus honnete
+
+```
+PREDICTION EUROMILLIONS:
+- Numeros: choisir aleatoirement (aucun edge possible)
+- Etoiles: top-3 rolling mode star2 (window=25), top-3 rolling mode star1
+- Confiance "au moins 1 etoile correcte": ~35% (2 etoiles) / ~47% (3 etoiles)
+- Edge reel vs random: +2-3 points de pourcentage
+- Ce n'est PAS suffisant pour etre profitable
+```
+
+### Methodes testees (liste exhaustive, 40+)
+
+Chi2, autocorrelation, hot/cold, co-occurrence, FFT, ML classique, PCA, wavelets, compression, clustering, embedding, Markov, HMM, algorithme genetique, phase lunaire, Fibonacci, Takens embedding, displacement autocorrelation, momentum, spread dynamics, star gap, modular residues, parity, digit sum, polynomial coefficients, Kolmogorov complexity, pattern matching, sequence matching, day of week, draw interval, golden ratio, resonance cross-draw, local entropy, conditional patterns, drought analysis, GradientBoosting 57 features, position-based prediction, coverage analysis, oracle ceiling, jackpot influence, binary decomposition, NMF latent factors, circular geometry, absence patterns, centroid interval autocorrelation.
