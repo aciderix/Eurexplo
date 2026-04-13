@@ -1,0 +1,24 @@
+{
+  "feature_names": [
+    "final_odds",
+    "morning_odds",
+    "drift",
+    "odds_rank",
+    "final_rank",
+    "odds_ratio",
+    "inv_odds",
+    "n_partants"
+  ],
+  "version": "1.0",
+  "train_n": 18130,
+  "test_n": 19879,
+  "train_dates": [
+    "20250909",
+    "20251209"
+  ],
+  "test_dates": [
+    "20251209",
+    "20260310"
+  ],
+  "test_auc": 0.10850249258367439
+}
