@@ -1,90 +1,147 @@
 # Accès API — Eurexplo
 
-## Kaggle (pour télécharger les données UK/FR)
-
-1. Créer un compte sur [kaggle.com](https://kaggle.com)
-2. Aller dans Account → Create New API Token → télécharge `kaggle.json`
-3. Stocker le fichier dans `~/.kaggle/kaggle.json` sur la machine qui lance les scripts
-
-```bash
-mkdir -p ~/.kaggle
-cp /chemin/vers/kaggle.json ~/.kaggle/kaggle.json
-chmod 600 ~/.kaggle/kaggle.json
-pip install kaggle
-```
-
-**Attention :** ne jamais commit ce fichier dans Git.
+**Dernière mise à jour :** 2026-04-13
+**Repo :** https://github.com/aciderix/Eurexplo
 
 ---
 
-## PMU France — Open PMU API
+## Source temps réel : PMU Open API
 
 **Base URL :** `https://open-pmu-api.vercel.app/api`
 
-**Endpoints disponibles :**
+| Méthode | Endpoint | Description | Réponse |
+|---------|----------|-------------|---------|
+| GET | `/courses` | Courses du jour | `{id, date, nom, hippodrome, type_course, distance}` |
+| GET | `/courses/[id]` | Détail d'une course | `{...partants: [{cheval, jockey, costaud, stats}]}` |
+| GET | `/runs` | Tous les partants | Liste complète des chevaux partants |
+| GET | `/runs/[id]` | Fiche partant | `{cheval, cote, position, historique}` |
+| GET | `/chevaux` | Index chevaux | `{id, nom}` |
+| GET | `/chevaux/[id]` | Fiche cheval (historique 50 courses) | `{nom, age, courses[], victories, places}` |
+| GET | `/jockeys` | Index jockeys | `{id, nom}` |
+| GET | `/jockeys/[id]` | Fiche jockey | `{nom, courses, victoires}` |
 
-| Méthode | Endpoint | Description |
-|---------|----------|-------------|
-| GET | `/runs` | Liste de tous les partants |
-| GET | `/runs/[id]` | Détail d'un partant |
-| GET | `/courses` | Liste des courses |
-| GET | `/courses/[id]` | Détail d'une course |
-| GET | `/chevaux` | Liste de tous les chevaux |
-| GET | `/chevaux/[id]` | Fiche complète d'un cheval |
-| GET | `/jockeys` | Liste des jockeys |
-| GET | `/jockeys/[id]` | Fiche d'un jockey |
+**Exemple récup courses du jour :**
+```python
+import requests
+r = requests.get('https://open-pmu-api.vercel.app/api/courses')
+courses = r.json()  # [{id, date, hippodrome, nom, partants:[{cheval, jockey}]}]
+```
 
-**Limites :** endpoint gratuit, aucune clé requise (pour l'instant).
+**Exemple fiche cheval :**
+```python
+r = requests.get('https://open-pmu-api.vercel.app/api/chevaux/ID_CHEVAL')
+cheval = r.json()  # → {nom, age, historique 50 courses, % win, % place}
+```
+
+**Limites :** API gratuite, aucune clé requise.
 
 ---
 
-## FDJ (Française des Jeux)
+## Données historiques stockées (fichiers JSON/CSV)
 
-### Tirages Euromillions / Loto
+| Donnée | Nb lignes | Source | Fichier |
+|--------|-----------|--------|---------|
+| Courses PMU France | 5 688 courses | PMU Open API + scraping | `pmu_races.json` |
+| Partants UK/IRE avec cotes | 38 314 | Kaggle `zoupet/horses-races-results-20252026` | `kaggle/race_results.csv` |
+| Cotes UK/IRE | 49 842 | Kaggle `arnopub/horse-racing-odds` | `kaggle/odds.csv` |
+| Historique forme UK | 203 340 rows | Kaggle `deltaromeo/horse-racing-uk-ireland-2015-2025` | `kaggle/recent_form.csv` |
+| Tirages Keno FDJ | 19 133 | FDJ ZIP `media.fdj.fr` | `keno.json` |
+| Tirages Loto FDJ | 7 332 | FDJ ZIP `media.fdj.fr` | `loto.json` |
+| Tirages Euromillions | 1 936 | API `euromillions.api.pedromealha.dev` | `draws.json` |
 
-Source : `https://github.com/pedro-mealha/euromillions-api`
+---
 
-API publique : `https://euromillions.api.pedromealha.dev`
+## FDJ — Tirages (historique)
 
+### Euromillions
 ```bash
-# Tous les tirages
-curl https://euromillions.api.pedromealha.dev/v1/draws
-
-# Un tirage précis
-curl https://euromillions.api.pedromealha.dev/v1/draws/1936
+# API publique (aucune clé requise)
+curl https://euromillions.api.pedromealha.dev/v1/draws        # tous les tirages
+curl https://euromillions.api.pedromealha.dev/v1/draws/1936   # tirage précis
 ```
 
-### Keno — Fichiers ZIP FDJ
-
+### Loto / Keno — Fichiers ZIP annuels
 ```bash
-# Historique par année
+# Loto
+curl -L "https://media.fdj.fr/static/csv/loto/loto_2024.zip" -o loto.zip
+curl -L "https://media.fdj.fr/static/csv/loto/loto_2023.zip" -o loto.zip
+
+# Keno
 curl -L "https://media.fdj.fr/static/csv/keno/keno_2025.zip" -o keno.zip
 curl -L "https://media.fdj.fr/static/csv/keno/keno_2024.zip" -o keno.zip
-curl -L "https://media.fdj.fr/static/csv/keno/keno_2023.zip" -o keno.zip
 ```
 
 ---
 
-## Configuration pour les scripts
+## Kaggle — Téléchargement des datasets
 
-Créer `config.json` (jamais commit) :
+```bash
+# Installer kaggle
+pip install kaggle
 
-```json
-{
-  "kaggle": {
-    "username": "votre_username",
-    "key": "votre_api_key"
-  }
-}
+# Configurer credentials
+mkdir -p ~/.kaggle
+# Copier kaggle.json dans ~/.kaggle/kaggle.json (depuis kaggle.com/account)
+
+# Télécharger les datasets UK/FR
+kaggle datasets download -d arnopub/courses-hippiques
+kaggle datasets download -d zoupet/horses-races-results-20252026 -f race_results.csv
+kaggle datasets download -d zoupet/horses-races-results-20252026 -f odds.csv
+kaggle datasets download -d deltaromeo/horse-racing-uk-ireland-2015-2025
+kaggle datasets download -d arnopub/horse-racing-odds
 ```
+
+**Structure fichiers CSV :**
+- `race_results.csv` : `runner_id, race_id, horse_name, result_position, odds, ...`
+- `odds.csv` : `odds_id, runner_id, european_odds, win_probability, ...`
+- `recent_form.csv` : `date, course_name, horse_name, result, SP, ...`
 
 ---
 
-## Variables d'environnement (pour Zo Space / production)
+## Zo Space — Routes de l'app
+
+| Route | Type | Description |
+|-------|------|-------------|
+| `/` | page | Dashboard React complet |
+| `/api/courses` | api | Courses du jour + stats |
+| `/api/dashboard` | api | KPIs (WR, ROI, bankroll) |
+| `/api/predict` | api | Prédictions par cheval |
+
+---
+
+## Variables d'environnement (Zo Space / production)
 
 | Variable | Description |
 |----------|-------------|
 | `KAGGLE_USERNAME` | Username Kaggle |
 | `KAGGLE_KEY` | Clé API Kaggle |
-| `STRIPE_SECRET_KEY` | Clé Stripe (si vente premium) |
-| `ZO_API_KEY` | Clé API Zo (pour accès bot) |
+| `STRIPE_SECRET_KEY` | Clé Stripe (optionnel, pour version premium) |
+| `ZO_API_KEY` | Clé API Zo (optionnel, pour notifications) |
+
+---
+
+## Configuration locale (scripts Python)
+
+Créer `config.json` à la racine du projet :
+
+```json
+{
+  "kaggle": {
+    "username": "votre_username",
+    "key": "votre_cle_api"
+  }
+}
+```
+
+**Ne JAMAIS commit ce fichier.**
+
+---
+
+## Axes non implémentés (TODOs)
+
+- [ ] Mise à jour automatique des cotes en temps réel (H-1 course)
+- [ ] Récupération des résultats de chaque course en direct
+- [ ] Historique personnel des paris utilisateur (base SQLite)
+- [ ] Notifications push (Telegram / email) sur bets du jour
+- [ ] Intégration Stripe pour version premium
+- [ ] Données UK temps réel (open-pmu-api ne couvre que FR)
