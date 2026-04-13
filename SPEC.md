@@ -1,138 +1,90 @@
-# PMU AI Predictor — Application Web
+# Accès API — Eurexplo
 
-## 1. Concept & Vision
+## Kaggle (pour télécharger les données UK/FR)
 
-Application de prédiction pour les courses hippiques françaises (PMU). L'interface présente les courses du jour avec les prédictions du modèle, les stratégies recommandées, et les performances historiques. L'objectif est de donner à l'utilisateur un outil sérieux, documenté, avec des chiffres vérifiables — pas un꾸미기 de promesses exagérées.
+1. Créer un compte sur [kaggle.com](https://kaggle.com)
+2. Aller dans Account → Create New API Token → télécharge `kaggle.json`
+3. Stocker le fichier dans `~/.kaggle/kaggle.json` sur la machine qui lance les scripts
 
-Philosophy : transparence totale sur les performances, les limites, et les risques.
-
----
-
-## 2. Design Language
-
-**Aesthetic:** Dark data-driven, inspired by Bloomberg Terminal + modern fintech. Dense information, clear hierarchy, zero fluff.
-
-**Color palette:**
-- Background: #0a0a0f (near-black)
-- Card surface: #141420
-- Border: #2a2a3a
-- Primary accent: #3b82f6 (blue — confiance haute)
-- Warning accent: #f59e0b (amber — confiance medium)
-- Danger: #ef4444 (red)
-- Success: #22c55e (green)
-- Text primary: #f1f5f9
-- Text muted: #94a3b8
-
-**Typography:**
-- Headings: Inter (bold), fallback sans-serif
-- Body/data: JetBrains Mono (monospace for numbers), fallback monospace
-- Sizes: 12px base for dense data, 14px for readable content
-
-**Motion:**
-- Minimal — only skeleton loaders and subtle progress indicators
-- No decorative animations
-
----
-
-## 3. Layout & Structure
-
-### Page principale — Dashboard
-
-```
-[HEADER] Logo + Nav (Dashboard | Recherche | Stats | A propos)
-[COURSE FILTER] Date picker + Hipodrome filter
-[COURSE GRID] Cards pour chaque course du jour
-  [RACE CARD] Hour, hipodrome, distance, discipline
-    [RUNNER TABLE] Classement par probabilité predite
-      | # | Cheval | Cote | Probabilité | Edge | Strategie | Kelly |
+```bash
+mkdir -p ~/.kaggle
+cp /chemin/vers/kaggle.json ~/.kaggle/kaggle.json
+chmod 600 ~/.kaggle/kaggle.json
+pip install kaggle
 ```
 
-### Pages secondaires
-
-- **Recherche** — explorer un cheval / driver / entraineur par nom
-- **Stats** — performance du modèle (WR, ROI, distribution par segment)
-- **A propos** — documentation, methodology, limitations, risks
+**Attention :** ne jamais commit ce fichier dans Git.
 
 ---
 
-## 4. Features & Interactions
+## PMU France — Open PMU API
 
-### Course du jour
-- Affiche les courses du jour depuis open-pmu-api
-- Chaque cheval prédit avec probabilité, cote FDJ, edge (valeur vs probabilité)
-- Recommandation stratégique (Confiance haute/Médium/Edge)
-- Indicateur Kelly (mise recommandée)
+**Base URL :** `https://open-pmu-api.vercel.app/api`
 
-### Backtest interactif
-- Sélectionner période, stratégie, niveau de mise
-- VoirWR, ROI, distribution des gains/pertes
-- Graphique évoluant du bankroll
+**Endpoints disponibles :**
 
-### Recherche
-- Recherche par nom de cheval, driver, entraineur
-- Historique de performances
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/runs` | Liste de tous les partants |
+| GET | `/runs/[id]` | Détail d'un partant |
+| GET | `/courses` | Liste des courses |
+| GET | `/courses/[id]` | Détail d'une course |
+| GET | `/chevaux` | Liste de tous les chevaux |
+| GET | `/chevaux/[id]` | Fiche complète d'un cheval |
+| GET | `/jockeys` | Liste des jockeys |
+| GET | `/jockeys/[id]` | Fiche d'un jockey |
 
-### Données temps réel
-- Courses: open-pmu-api (Vercel)
-- Cotes: open-pmu-api ou scraping FDJ
-- Résultats: open-pmu-api après course
+**Limites :** endpoint gratuit, aucune clé requise (pour l'instant).
 
 ---
 
-## 5. Component Inventory
+## FDJ (Française des Jeux)
 
-### RaceCard
-- Header: heure, hippodrome, distance, discipline (Obstacle/Plat/Trot)
-- Badge statut: à venir / en cours / terminé
-- Runner table: trié par probabilité predite
-- Statut: skeleton loader / data / no races
+### Tirages Euromillions / Loto
 
-### RunnerRow
-- Position dans le pronostic (1-5)
-- Nom cheval (lien vers fiche)
-- Cote FDJ
-- Barre de probabilité (%)
-- Badge edge: vert si >5%, rouge si <0
-- Badge strategie: HIGH/MED/EDGE
-- Mise Kelly (en euros)
+Source : `https://github.com/pedro-mealha/euromillions-api`
 
-### StatsPanel
-- 4 KPI en ligne: WR global, ROI, Paris joués, Bankroll simulé
-- Graphique ligne: évolution bankroll (pari fixe)
-- Heatmap: WR par type de course (discipline, distance, nm partants)
+API publique : `https://euromillions.api.pedromealha.dev`
 
-### RiskDisclaimer
-- Toujours visible en bas: "Les performances passées ne garantissent pas les résultats futurs. Jouer comporte des risques. Ne jouez pas plus que ce que vous pouvez perdre."
+```bash
+# Tous les tirages
+curl https://euromillions.api.pedromealha.dev/v1/draws
+
+# Un tirage précis
+curl https://euromillions.api.pedromealha.dev/v1/draws/1936
+```
+
+### Keno — Fichiers ZIP FDJ
+
+```bash
+# Historique par année
+curl -L "https://media.fdj.fr/static/csv/keno/keno_2025.zip" -o keno.zip
+curl -L "https://media.fdj.fr/static/csv/keno/keno_2024.zip" -o keno.zip
+curl -L "https://media.fdj.fr/static/csv/keno/keno_2023.zip" -o keno.zip
+```
 
 ---
 
-## 6. Technical Approach
+## Configuration pour les scripts
 
-**Stack:** Zo Space (Hono + React) — zero-config, instant deploy
+Créer `config.json` (jamais commit) :
 
-**Backend:**
-- API routes pour charger les données en temps réel
-- Cache des résultats en mémoire (1h TTL)
-- Modèle pickle loaded au démarrage
+```json
+{
+  "kaggle": {
+    "username": "votre_username",
+    "key": "votre_api_key"
+  }
+}
+```
 
-**Data sources:**
-- Courses/chevaux: `https://open-pmu-api.vercel.app/api/courses/daily/{date}`
-- Cotes: à déterminer (open-pmu-api ou scraping)
-- Résultats: open-pmu-api après course
+---
 
-**Model:**
-- Pre-loaded au démarrage du server (pickle)
-- Prediction via features déjà calculées dans le script
-- Pour l'app web: on recalcule les features côté serveur à partir des données temps réel
+## Variables d'environnement (pour Zo Space / production)
 
-**API endpoints:**
-- `GET /api/courses?date=YYYY-MM-DD` — courses du jour
-- `GET /api/predictions/:race_id` — predictions pour une course
-- `GET /api/stats` — performance du modèle
-- `GET /api/search?q=cheval` — recherche
-
-**Fichiers:**
-- `SPEC.md` — ce document
-- `api/` — routes backend
-- `pages/` — composants React
-- `scripts/` — scripts de processing (pré-calculation des predictions)
+| Variable | Description |
+|----------|-------------|
+| `KAGGLE_USERNAME` | Username Kaggle |
+| `KAGGLE_KEY` | Clé API Kaggle |
+| `STRIPE_SECRET_KEY` | Clé Stripe (si vente premium) |
+| `ZO_API_KEY` | Clé API Zo (pour accès bot) |
