@@ -1,146 +1,294 @@
+@ -1,146 +0,0 @@
+
 Skip to
+
 content
+
 Kaggle
 
+
+
 Create
+
 Search
+
+
 
 Home
 
+
+
 Competitions
+
+
 
 Datasets
 
+
+
 Models
+
+
 
 Benchmarks
 
+
+
 Game Arena
+
+
 
 Code
 
+
+
 Discussions
+
+
 
 Learn
 
+
+
 More
+
+
 
 Your Work
 
 
+
+
+
 View Active Events
 
+
+
 Skip to
+
 content
+
 Kaggle
+
 Settings
+
 Control over your Kaggle account and all communications
+
 Settings
+
 Your email address
+
 fromthenext77@gmail.com
 
 
+
+
+
 Change email
+
 Phone verification
+
 Your account is not verified. Verifying your account with a phone number allows you to do more on Kaggle, and helps prevent spam and other abuse.
 
 
+
+
+
 Phone verify
+
 Identity verification
+
 You have not verified your identity using Persona, a trusted 3rd-party service. Verifying your identity allows you to join competitions that require identity verification. Learn More
 
 
+
+
+
 Verify my account
+
 Theme
+
 Choose your Kaggle UI theme below. Please provide any feedback here.
 
+
+
 light
+
 Theme
+
 Progression
+
 We recognize user achievements through the systems of Tiers, Medals, and Rankings. If you prefer not to have these displayed publicly on your profile and elsewhere, you can opt out. Learn more about progression
 
+
+
 Display your Kaggle Tier, Medals and Ranking publicly
+
 Automatic Upvote when forking a Notebook
+
 When you copy and edit someone else's Notebook, if you haven't already upvoted the Notebook, it will be upvoted automatically. When an upvote is given this way, we will remind you the first time you edit your copied version of the Notebook.
 
+
+
 Upvote a Notebook when you copy and edit
+
 See upvote reminders when you copy and edit a Notebook
+
 API
+
 Using the Kaggle CLI, you can interact with Competitions and Datasets to download data, make submissions, and more via the command line. Read the docs
 
+
+
 API Tokens (Recommended)
+
 Allows creating multiple tokens and managing them individually. Creating a new token doesn't expire any existing tokens or legacy API credentials (see section below).
+
+
 
 These tokens are only supported by newer versions of kaggle CLI (>= 1.8.0) or kagglehub (>= 0.4.1).
 
 
+
+
+
 Generate New Token
+
 Token Name	Type	Creation Time	Last Use Time	Requested By	
+
 Test	Access token	in 1 second	Never used	User	
+
 Legacy Api Key	25 seconds ago	Never used	User	
+
 Legacy API Credentials
+
 Expires any existing legacy keys and downloads a kaggle.json file with your new credentials. This does not expire any existing API tokens (see above).
+
+
 
 For newer versions of kaggle CLI (>= 1.8.0) or kagglehub (>= 0.4.1), you should use API tokens (see section above) rather than legacy API credentials.
 
-Ensure kaggle.json is in the location ~/.kaggle/kaggle.json to use the API.
+
+
+Ensure kaggle.json is in the location \~/.kaggle/kaggle.json to use the API.
+
+
 
 Dismiss
 
+
+
 Create Legacy API Key
 
+
+
 Expire Legacy API Key
+
 Quotas
+
 Private Datasets
+
 0 B / 214.75 GB
+
+
 
 Private Models
+
 0 B / 214.75 GB
 
+
+
 Kaggle GPU
+
 00:00 / 30 hrs
 
+
+
 Kaggle TPU
+
 00:00 / 20 hrs
 
+
+
 Daily AI Models
+
 $0.00 / $10.00
 
+
+
 Monthly AI Models
+
 $0.00 / $100.00
 
+
+
 Active logins
+
 Google email
+
 fromthenext77@gmail.com
 
+
+
 Your linked accounts
+
 Linked accounts allow you to access Google Cloud and GitHub services in Notebooks.
+
+
+
 
 
 To get started with Google Cloud Services, open a Kaggle notebook in the editor and click on Add-ons > Google Cloud Services under the top menu. Then, follow the instructions in the modal to link your Google Cloud account to Kaggle.
 
 
+
+
+
 If you do not have Google Cloud services enabled for your Google account, please visit the Google Cloud Platform page to get help setting it up.
+
+
+
 
 
 You can link your GitHub account from the Kaggle notebook editor. Click on File > Open Upload Notebook > GitHub. Then, you can check the "Include Private Repositories" checkbox to link your GitHub account.
 
+
+
 Delete Kaggle account
+
 Permanently delete your Kaggle account
+
+
+
 
 
 Delete account
 
 
+
+
+
 Close
+
 API Token is now available
+
 Please copy your API token now. You won't be able to view it again. You can always generate a new one if needed.
-KGAT_1ed0425a7cfdcb377aefbb99c301774f
+
+KGAT\_1ed0425a7cfdcb377aefbb99c301774f
+
 API TOKEN
 
-To use this token, set the KAGGLE_API_TOKEN environment variable:
 
-export KAGGLE_API_TOKEN=KGAT_1ed0425a7cfdcb377aefbb99c301774f
-After setting KAGGLE_API_TOKEN, you can use the client as follows:
+
+To use this token, set the KAGGLE\_API\_TOKEN environment variable:
+
+
+
+export KAGGLE\_API\_TOKEN=KGAT\_1ed0425a7cfdcb377aefbb99c301774f
+
+After setting KAGGLE\_API\_TOKEN, you can use the client as follows:
+
+
 
 kaggle competitions list
+
