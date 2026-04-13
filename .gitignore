@@ -1,0 +1,9 @@
+# Large zip archives (re-download from Kaggle if needed)
+*.zip
+
+# Scraper progress file (ephemeral)
+.pmu_scraper_progress.json
+
+# Python
+__pycache__/
+*.pyc
