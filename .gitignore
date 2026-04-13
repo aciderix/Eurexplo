@@ -1,0 +1,6 @@
+# Large zip archives (re-download from Kaggle if needed)
+*.zip
+
+# Python
+__pycache__/
+*.pyc
