@@ -1,8 +1,7 @@
 # Large zip archives (re-download from Kaggle if needed)
 *.zip
 
-# Large generated datasets (re-generate with pmu_scraper_parallel.py)
-pmu_full_dataset.csv
+# Scraper progress file (ephemeral)
 .pmu_scraper_progress.json
 
 # Python
