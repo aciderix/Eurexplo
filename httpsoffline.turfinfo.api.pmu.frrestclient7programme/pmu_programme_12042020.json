@@ -1,0 +1,5588 @@
+{
+  "programme": {
+    "cached": false,
+    "date": 1586642400000,
+    "timezoneOffset": 7200000,
+    "reunions": [
+      {
+        "cached": false,
+        "timezoneOffset": 7200000,
+        "dateReunion": 1586642400000,
+        "numOfficiel": 1,
+        "numOfficielReunionPrecedente": null,
+        "numOfficielReunionSuivante": 2,
+        "numExterne": 1,
+        "nature": "DIURNE",
+        "hippodrome": {
+          "code": "ROW",
+          "libelleCourt": "ROMME",
+          "libelleLong": "HIPPODROME DE ROMME SUEDE"
+        },
+        "pays": {
+          "code": "SWE",
+          "libelle": "Suède"
+        },
+        "courses": [
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 1,
+            "numExterne": 1,
+            "heureDepart": 1586699100000,
+            "libelle": "PRIX ORELIE DE RETZ                     SUEDE",
+            "libelleCourt": "ORELIE DE RETZ",
+            "montantPrix": 7086,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "MONTE",
+            "specialite": "TROT_MONTE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 10,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994801,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7086,
+            "montantOffert1er": 2865,
+            "montantOffert2eme": 1433,
+            "montantOffert3eme": 955,
+            "montantOffert4eme": 649,
+            "montantOffert5eme": 563,
+            "conditions": "PRIX ORELIE DE RETZ Course 01 7.086 - Monté. - 2.140 mètres. 2.865, 1.433, 955, 649, 563. - 621 au fonds d'élevage. Pour 4 à 15 ans ayant gagné au moins 1.910, mais pas 128.925. - Recul de 20 . à 42.975.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 162000,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  3
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                4
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                1
+              ],
+              [
+                7
+              ],
+              [
+                6
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 2,
+            "numExterne": 2,
+            "heureDepart": 1586700480000,
+            "libelle": "PRIX OREE DU MARAIS                     SUEDE",
+            "libelleCourt": "OREE DU MARAIS",
+            "montantPrix": 7086,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994802,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7086,
+            "montantOffert1er": 2865,
+            "montantOffert2eme": 1433,
+            "montantOffert3eme": 955,
+            "montantOffert4eme": 649,
+            "montantOffert5eme": 563,
+            "conditions": "PRIX OREE DU MARAIS Course 02 Départ à l'Autostart 7.086 - Attelé. femelles. - 2.140 mètres. 2.865, 1.433, 955, 649, 563. - 621 au fonds d'élevage. Pour juments de 3 à 15 ans ayant gagné au moins 955, mais pas 15.758.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 160290,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  2
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                7
+              ],
+              [
+                8
+              ],
+              [
+                5
+              ],
+              [
+                1
+              ],
+              [
+                9
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 3,
+            "numExterne": 3,
+            "heureDepart": 1586701860000,
+            "libelle": "PRIX ORPHEA DE NAY                      SUEDE",
+            "libelleCourt": "ORPHEA DE NAY",
+            "montantPrix": 19673,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994803,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 19673,
+            "montantOffert1er": 9550,
+            "montantOffert2eme": 4775,
+            "montantOffert3eme": 2388,
+            "montantOffert4eme": 1289,
+            "montantOffert5eme": 812,
+            "conditions": "PRIX ORPHEA DE NAY Course 03 19.673 - Attelé. femelles. - 2.140 mètres. 9.550, 4.775, 2.388, 1.289, 812, 525, 334. Pour juments de 3 à 15 ans ayant gagné au moins 9.550, mais pas 47.750. - Re ul de 20 m. à 28.173.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 187700,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  7
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                14
+              ],
+              [
+                6
+              ],
+              [
+                8
+              ],
+              [
+                9
+              ],
+              [
+                2
+              ],
+              [
+                13
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 4,
+            "numExterne": 4,
+            "heureDepart": 1586703180000,
+            "libelle": "PRIX OKAPI DE FAEL                      SUEDE",
+            "libelleCourt": "OKAPI DE FAEL",
+            "montantPrix": 7086,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 15,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994804,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7086,
+            "montantOffert1er": 2865,
+            "montantOffert2eme": 1433,
+            "montantOffert3eme": 955,
+            "montantOffert4eme": 649,
+            "montantOffert5eme": 563,
+            "conditions": "PRIX OKAPI DE FAEL Course 04 Départ à l'Autostart 7.086 - Attelé. - 2.140 mètres. 2.865, 1.433, 955, 649, 563. - 621 au fonds d'élevage. Pour 3 à 15 ans ayant gagné au moins 7.640, mais pas 33.425.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 159430,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  2
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                11
+              ],
+              [
+                4
+              ],
+              [
+                8
+              ],
+              [
+                1
+              ],
+              [
+                7
+              ],
+              [
+                15
+              ],
+              [
+                10
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 5,
+            "numExterne": 5,
+            "heureDepart": 1586708400000,
+            "libelle": "PRIX OPUS VIERVIL                       SUEDE",
+            "libelleCourt": "OPUS VIERVIL",
+            "montantPrix": 21680,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994805,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 21680,
+            "montantOffert1er": 10505,
+            "montantOffert2eme": 5253,
+            "montantOffert3eme": 2626,
+            "montantOffert4eme": 1385,
+            "montantOffert5eme": 860,
+            "conditions": "PRIX OPUS VIERVIL Course 05 21.680 - Attelé. - 2.140 mètres. 10.505, 5.253, 2.626, 1.385, 860, 573, 478. Pour 3 à 15 ans ayant gagné au moins 9.550, mais pas 23.875.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 157080,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  2
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POTEAU_GALOP",
+                "numeroParticipants": [
+                  6
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                10
+              ],
+              [
+                12
+              ],
+              [
+                8
+              ],
+              [
+                1
+              ],
+              [
+                7
+              ],
+              [
+                3
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 6,
+            "numExterne": 6,
+            "heureDepart": 1586709720000,
+            "libelle": "PRIX OSIRIS DE CORBERY                  SUEDE",
+            "libelleCourt": "OSIRIS CORBERY",
+            "montantPrix": 21680,
+            "parcours": "",
+            "distance": 3140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994806,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 21680,
+            "montantOffert1er": 10505,
+            "montantOffert2eme": 5253,
+            "montantOffert3eme": 2626,
+            "montantOffert4eme": 1385,
+            "montantOffert5eme": 860,
+            "conditions": "PRIX OSIRIS DE CORBERY Course 06 Départ à l'Autostart 21.680 - Attelé. - 3.140 mètres. 10.505, 5.253, 2.626, 1.385, 860, 573, 478. Pour 3 à 15 ans ayant gagné au moins 23.875, mais pas 47.750.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 236760,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  8,
+                  9
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                1
+              ],
+              [
+                4
+              ],
+              [
+                12
+              ],
+              [
+                2
+              ],
+              [
+                6
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 7,
+            "numExterne": 7,
+            "heureDepart": 1586711100000,
+            "libelle": "PRIX ORELIE MADRIK                      SUEDE",
+            "libelleCourt": "ORELIE MADRIK",
+            "montantPrix": 39108,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 15,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994807,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 39108,
+            "montantOffert1er": 19100,
+            "montantOffert2eme": 9550,
+            "montantOffert3eme": 4775,
+            "montantOffert4eme": 2531,
+            "montantOffert5eme": 1624,
+            "conditions": "PRIX ORELIE MADRIK Course 07 39.108 - Attelé. - 2.140 mètres. 19.100, 9.550, 4.775, 2.531, 1.624, 955, 573. Pour 4 à 15 ans. - Recul de 20 m. à 85.950, de 40 m. à 143.250.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 179200,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  4
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  2,
+                  6,
+                  8,
+                  10,
+                  14
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                12
+              ],
+              [
+                5
+              ],
+              [
+                7
+              ],
+              [
+                3
+              ],
+              [
+                15
+              ],
+              [
+                11
+              ],
+              [
+                13
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 8,
+            "numExterne": 8,
+            "heureDepart": 1586712420000,
+            "libelle": "PRIX OSTIANA                            SUEDE",
+            "libelleCourt": "OSTIANA",
+            "montantPrix": 21680,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 15,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994808,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 21680,
+            "montantOffert1er": 10505,
+            "montantOffert2eme": 5253,
+            "montantOffert3eme": 2626,
+            "montantOffert4eme": 1385,
+            "montantOffert5eme": 860,
+            "conditions": "PRIX OSTIANA Course 08 21.680 - Attelé. femelles. - 2.140 mètres. 10.505, 5.253, 2.626, 1.385, 860, 573, 478. Pour juments de 3 à 15 ans ayant gagné au moins 9.550, mais pas 57.300. - Re ul de 20 m. à 19.100.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 162860,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  6
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POTEAU_GALOP",
+                "numeroParticipants": [
+                  15
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                14
+              ],
+              [
+                2
+              ],
+              [
+                9
+              ],
+              [
+                10
+              ],
+              [
+                5
+              ],
+              [
+                13
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 9,
+            "numExterne": 9,
+            "heureDepart": 1586714280000,
+            "libelle": "PRIX OASIS GEDE                         SUEDE",
+            "libelleCourt": "OASIS GEDE",
+            "montantPrix": 21680,
+            "parcours": "",
+            "distance": 1640,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994809,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 21680,
+            "montantOffert1er": 10505,
+            "montantOffert2eme": 5253,
+            "montantOffert3eme": 2626,
+            "montantOffert4eme": 1385,
+            "montantOffert5eme": 860,
+            "conditions": "PRIX OASIS GEDE Course 09 Départ à l'Autostart 21.680 - Attelé. - 1.640 mètres. 10.505, 5.253, 2.626, 1.385, 860, 573, 478. Pour 3 à 15 ans ayant gagné au moins 47.750, mais pas 85.950.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 119720,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  8
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POTEAU_GALOP",
+                "numeroParticipants": [
+                  2
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                7
+              ],
+              [
+                4
+              ],
+              [
+                9
+              ],
+              [
+                12
+              ],
+              [
+                3
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 10,
+            "numExterne": 10,
+            "heureDepart": 1586715720000,
+            "libelle": "PRIX OLGA DU BIWETZ                     SUEDE",
+            "libelleCourt": "OLGA DU BIWETZ",
+            "montantPrix": 29272,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994810,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 29272,
+            "montantOffert1er": 14325,
+            "montantOffert2eme": 7163,
+            "montantOffert3eme": 3581,
+            "montantOffert4eme": 1815,
+            "montantOffert5eme": 1146,
+            "conditions": "PRIX OLGA DU BIWETZ Course 10 Départ à l'Autostart 29.272 - Attelé. - 2.140 mètres. 14.325, 7.163, 3.581, 1.815, 1.146, 764, 478. Pour 3 à 15 ans ayant gagné au moins 85.950.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_TIERCE",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TIERCE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": true,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "QUARTE_PLUS",
+                "miseBase": 130,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "QUARTE_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_QUARTE_PLUS",
+                "miseBase": 130,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_QUARTE_PLUS",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "QUINTE_PLUS",
+                "miseBase": 200,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "nouveauQuinte": true,
+                "misEnPaiement": false,
+                "codePari": "QUINTE_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_QUINTE_PLUS",
+                "miseBase": 200,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "nouveauQuinte": true,
+                "misEnPaiement": false,
+                "codePari": "E_QUINTE_PLUS",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "TIC_TROIS",
+                "miseBase": 430,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "TIC_TROIS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": false,
+                "complement": false
+              },
+              {
+                "typePari": "E_TIC_TROIS",
+                "miseBase": 430,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TIC_TROIS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": false,
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 73010,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  2
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                7
+              ],
+              [
+                5
+              ],
+              [
+                9
+              ],
+              [
+                4
+              ],
+              [
+                6
+              ],
+              [
+                11
+              ],
+              [
+                3
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 11,
+            "numExterne": 11,
+            "heureDepart": 1586717040000,
+            "libelle": "PRIX ORIGANO LAP                        SUEDE",
+            "libelleCourt": "ORIGANO LAP",
+            "montantPrix": 24498,
+            "parcours": "",
+            "distance": 2640,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994811,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 24498,
+            "montantOffert1er": 11938,
+            "montantOffert2eme": 5969,
+            "montantOffert3eme": 2961,
+            "montantOffert4eme": 1528,
+            "montantOffert5eme": 955,
+            "conditions": "PRIX ORIGANO LAP Course 11 Départ à l'Autostart 24.498 - Attelé. - 2.640 mètres. 11.938, 5.969, 2.961, 1.528, 955, 669, 478. Pour 3 à 15 ans ayant gagné au moins 47.750, mais pas 162.350.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_PICK5",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_PICK5",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 5,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  10,
+                  25,
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 195620,
+            "participants": [],
+            "ecuries": [],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                4
+              ],
+              [
+                3
+              ],
+              [
+                12
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 12,
+            "numExterne": 12,
+            "heureDepart": 1586718060000,
+            "libelle": "PRIX OISEAU DE FEUX                     SUEDE",
+            "libelleCourt": "OISEAU DE FEUX",
+            "montantPrix": 7086,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 15,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 994812,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7086,
+            "montantOffert1er": 2865,
+            "montantOffert2eme": 1433,
+            "montantOffert3eme": 955,
+            "montantOffert4eme": 649,
+            "montantOffert5eme": 563,
+            "conditions": "PRIX OISEAU DE FEUX Course 12 7.086 - Attelé. - 2.140 mètres. 2.865, 1.433, 955, 649, 563. - 621 au fonds d'élevage. Pour 3 à 15 ans ayant gagné au moins 191, mais pas 11.460. - Recul de 20 m. 3.820.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 76050,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  8,
+                  14
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "ROW",
+              "libelleCourt": "ROMME",
+              "libelleLong": "HIPPODROME DE ROMME SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                11
+              ],
+              [
+                12
+              ],
+              [
+                5
+              ],
+              [
+                9
+              ],
+              [
+                13
+              ]
+            ],
+            "hasEParis": true
+          }
+        ],
+        "audience": "NATIONAL",
+        "statut": "TERMINEE",
+        "disciplinesMere": [
+          "TROT"
+        ],
+        "specialites": [
+          "TROT_MONTE",
+          "TROT_ATTELE"
+        ],
+        "derniereReunion": false,
+        "parisEvenement": [
+          {
+            "codePari": "QUINTE_PLUS",
+            "course": {
+              "dateProgramme": 1586642400000,
+              "numReunion": 1,
+              "numOrdre": 10
+            }
+          },
+          {
+            "codePari": "E_QUINTE_PLUS",
+            "course": {
+              "dateProgramme": 1586642400000,
+              "numReunion": 1,
+              "numOrdre": 10
+            }
+          },
+          {
+            "codePari": "E_PICK5",
+            "course": {
+              "dateProgramme": 1586642400000,
+              "numReunion": 1,
+              "numOrdre": 11
+            }
+          }
+        ],
+        "meteo": {
+          "datePrevision": 1586673900000,
+          "nebulositeCode": "P6",
+          "nebulositeLibelleCourt": "Couvert",
+          "nebulositeLibelleLong": "Le ciel sera couvert mais il ne devrait pas pleuvoir.",
+          "temperature": 12,
+          "forceVent": 22,
+          "directionVent": "SO"
+        },
+        "offresInternet": false,
+        "cagnottes": [],
+        "reportPlusFpaMax": 20
+      },
+      {
+        "cached": false,
+        "timezoneOffset": 7200000,
+        "dateReunion": 1586642400000,
+        "numOfficiel": 2,
+        "numOfficielReunionPrecedente": 1,
+        "numOfficielReunionSuivante": 3,
+        "numExterne": 2,
+        "nature": "DIURNE",
+        "hippodrome": {
+          "code": "A28",
+          "libelleCourt": "ALBANY AUSTRALIE",
+          "libelleLong": "HIPPODROME DE ALBANY AUSTRALIE"
+        },
+        "pays": {
+          "code": "AUS",
+          "libelle": "Australie"
+        },
+        "courses": [
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 6,
+            "numExterne": 6,
+            "heureDepart": 1586674320000,
+            "libelle": "LORDHELPMERUN HANDICAP (1900 METRES)",
+            "libelleCourt": "LORDHELPMERUN H",
+            "montantPrix": 8200,
+            "parcours": "",
+            "distance": 1900,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "DEUX_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 8009,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 8200,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de deux ans et plus (Allocations di ribuées aux 5 premiers). Les informations concernant les partants sont commu quées sous la responsabilité de l'autorité hippique du pays dans lequel la c rse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 123560,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "A28",
+              "libelleCourt": "ALBANY AUSTRALIE",
+              "libelleLong": "HIPPODROME DE ALBANY AUSTRALIE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                7
+              ],
+              [
+                11
+              ],
+              [
+                12
+              ],
+              [
+                5
+              ],
+              [
+                2
+              ],
+              [
+                13
+              ],
+              [
+                9
+              ],
+              [
+                3
+              ],
+              [
+                14
+              ],
+              [
+                10
+              ],
+              [
+                6
+              ],
+              [
+                8
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 7,
+            "numExterne": 7,
+            "heureDepart": 1586676720000,
+            "libelle": "MUNGRUP STUD STANDING A LOFT HANDICAP (1100 METRES)",
+            "libelleCourt": "MUNGRUP STUD ST",
+            "montantPrix": 8200,
+            "parcours": "",
+            "distance": 1100,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "DEUX_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 8010,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 8200,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de deux ans et plus (Allocations di ribuées aux 5 premiers). Les informations concernant les partants sont commu quées sous la responsabilité de l'autorité hippique du pays dans lequel la c rse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 67270,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "A28",
+              "libelleCourt": "ALBANY AUSTRALIE",
+              "libelleLong": "HIPPODROME DE ALBANY AUSTRALIE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                3
+              ],
+              [
+                6
+              ],
+              [
+                2
+              ],
+              [
+                7
+              ],
+              [
+                1
+              ],
+              [
+                9
+              ],
+              [
+                8
+              ],
+              [
+                4
+              ],
+              [
+                12
+              ],
+              [
+                10
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 8,
+            "numExterne": 8,
+            "heureDepart": 1586679000000,
+            "libelle": "TABTOUCH LADIES BRACELET (1600 METRES)",
+            "libelleCourt": "TABTOUCH LADIES",
+            "montantPrix": 15871,
+            "parcours": "",
+            "distance": 1600,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "DEUX_ANS_ET_PLUS",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 11,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 8011,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 15871,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang femelle de deux ans et plus (Allocations distribuées aux 5 pre ers). Les informations concernant les partants sont communiquées sous la res nsabilité de l'autorité hippique du pays dans lequel la course est organisée",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 101690,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "A28",
+              "libelleCourt": "ALBANY AUSTRALIE",
+              "libelleLong": "HIPPODROME DE ALBANY AUSTRALIE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                3
+              ],
+              [
+                7
+              ],
+              [
+                9
+              ],
+              [
+                10
+              ],
+              [
+                4
+              ],
+              [
+                1
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                11
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 9,
+            "numExterne": 9,
+            "heureDepart": 1586681400000,
+            "libelle": "CHAFF CITY HANDICAP (1230 METRES)",
+            "libelleCourt": "CHAFF CITY HAND",
+            "montantPrix": 8200,
+            "parcours": "",
+            "distance": 1230,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "DEUX_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 11,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 8068,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 8200,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de deux ans et plus (Allocations di ribuées aux 5 premiers). Les informations concernant les partants sont commu quées sous la responsabilité de l'autorité hippique du pays dans lequel la c rse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 75570,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  9
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "A28",
+              "libelleCourt": "ALBANY AUSTRALIE",
+              "libelleLong": "HIPPODROME DE ALBANY AUSTRALIE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                4
+              ],
+              [
+                6
+              ],
+              [
+                10
+              ],
+              [
+                2
+              ],
+              [
+                1
+              ],
+              [
+                5
+              ],
+              [
+                8
+              ],
+              [
+                7
+              ],
+              [
+                11
+              ],
+              [
+                3
+              ]
+            ],
+            "hasEParis": true
+          }
+        ],
+        "audience": "NATIONAL",
+        "statut": "TERMINEE",
+        "disciplinesMere": [
+          "PLAT"
+        ],
+        "specialites": [
+          "PLAT"
+        ],
+        "derniereReunion": false,
+        "parisEvenement": [],
+        "meteo": {
+          "datePrevision": 1586673900000,
+          "nebulositeCode": "P4",
+          "nebulositeLibelleCourt": "Peu Nuageux",
+          "nebulositeLibelleLong": "Le soleil l'emportera et les nuages resteront discrets.",
+          "temperature": 24,
+          "forceVent": 14,
+          "directionVent": "O"
+        },
+        "offresInternet": false,
+        "cagnottes": [],
+        "reportPlusFpaMax": 20
+      },
+      {
+        "cached": false,
+        "timezoneOffset": 7200000,
+        "dateReunion": 1586642400000,
+        "numOfficiel": 3,
+        "numOfficielReunionPrecedente": 2,
+        "numOfficielReunionSuivante": null,
+        "numExterne": 3,
+        "nature": "DIURNE",
+        "hippodrome": {
+          "code": "SHT",
+          "libelleCourt": "SHA TIN (HONG KONG)",
+          "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+        },
+        "pays": {
+          "code": "AAA",
+          "libelle": "Indetermine"
+        },
+        "courses": [
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 3,
+            "numExterneReunion": 3,
+            "numOrdre": 6,
+            "numExterne": 6,
+            "heureDepart": 1586675400000,
+            "libelle": "KING'S PARK HANDICAP - SEC 1",
+            "libelleCourt": "KING'S PARK S1",
+            "montantPrix": 105344,
+            "parcours": "",
+            "distance": 1200,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_DROITE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "TROIS_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 7987,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 105344,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de trois ans et plus (Allocations d tribuées aux 5 premiers). Les informations concernant les partants sont comm iquées sous la responsabilité de l'autorité hippique du pays dans lequel la urse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 69520,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "SHT",
+              "libelleCourt": "SHA TIN (HONG KONG)",
+              "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                1
+              ],
+              [
+                3
+              ],
+              [
+                6
+              ],
+              [
+                5
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                9
+              ],
+              [
+                7
+              ],
+              [
+                11
+              ],
+              [
+                8
+              ],
+              [
+                12
+              ],
+              [
+                10
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 3,
+            "numExterneReunion": 3,
+            "numOrdre": 7,
+            "numExterne": 7,
+            "heureDepart": 1586677200000,
+            "libelle": "MONG KOK HANDICAP",
+            "libelleCourt": "MONG KOK HANDIC",
+            "montantPrix": 105344,
+            "parcours": "",
+            "distance": 1400,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_DROITE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "TROIS_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 7988,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 105344,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de trois ans et plus (Allocations d tribuées aux 5 premiers). Les informations concernant les partants sont comm iquées sous la responsabilité de l'autorité hippique du pays dans lequel la urse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 82060,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "SHT",
+              "libelleCourt": "SHA TIN (HONG KONG)",
+              "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                13
+              ],
+              [
+                8
+              ],
+              [
+                9
+              ],
+              [
+                11
+              ],
+              [
+                6
+              ],
+              [
+                10
+              ],
+              [
+                7
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                12
+              ],
+              [
+                2
+              ],
+              [
+                5
+              ],
+              [
+                1
+              ],
+              [
+                14
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 3,
+            "numExterneReunion": 3,
+            "numOrdre": 8,
+            "numExterne": 8,
+            "heureDepart": 1586679000000,
+            "libelle": "JORDAN HANDICAP",
+            "libelleCourt": "JORDAN HANDICAP",
+            "montantPrix": 157963,
+            "parcours": "",
+            "distance": 1800,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_DROITE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "TROIS_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 11,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 7989,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 157963,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de trois ans et plus (Allocations d tribuées aux 5 premiers). Les informations concernant les partants sont comm iquées sous la responsabilité de l'autorité hippique du pays dans lequel la urse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 106850,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "SHT",
+              "libelleCourt": "SHA TIN (HONG KONG)",
+              "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                10
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                6
+              ],
+              [
+                4
+              ],
+              [
+                1
+              ],
+              [
+                9
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ],
+              [
+                11
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 3,
+            "numExterneReunion": 3,
+            "numOrdre": 9,
+            "numExterne": 9,
+            "heureDepart": 1586680800000,
+            "libelle": "HO MAN TIN HANDICAP",
+            "libelleCourt": "HO MAN TIN HAND",
+            "montantPrix": 157963,
+            "parcours": "",
+            "distance": 1000,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_DROITE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "TROIS_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 7990,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 157963,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de trois ans et plus (Allocations d tribuées aux 5 premiers). Les informations concernant les partants sont comm iquées sous la responsabilité de l'autorité hippique du pays dans lequel la urse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 55990,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "SHT",
+              "libelleCourt": "SHA TIN (HONG KONG)",
+              "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                7
+              ],
+              [
+                1
+              ],
+              [
+                9
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                12
+              ],
+              [
+                10
+              ],
+              [
+                11
+              ],
+              [
+                6
+              ],
+              [
+                14
+              ],
+              [
+                8
+              ],
+              [
+                13
+              ],
+              [
+                3
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 3,
+            "numExterneReunion": 3,
+            "numOrdre": 10,
+            "numExterne": 10,
+            "heureDepart": 1586682900000,
+            "libelle": "HUNG HOM HANDICAP",
+            "libelleCourt": "HUNG HOM HANDIC",
+            "montantPrix": 157963,
+            "parcours": "",
+            "distance": 1400,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_DROITE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "TROIS_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 8016,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 157963,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de trois ans et plus (Allocations d tribuées aux 5 premiers). Les informations concernant les partants sont comm iquées sous la responsabilité de l'autorité hippique du pays dans lequel la urse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 81270,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "SHT",
+              "libelleCourt": "SHA TIN (HONG KONG)",
+              "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                13
+              ],
+              [
+                2
+              ],
+              [
+                11
+              ],
+              [
+                3
+              ],
+              [
+                9
+              ],
+              [
+                14
+              ],
+              [
+                5
+              ],
+              [
+                8
+              ],
+              [
+                6
+              ],
+              [
+                10
+              ],
+              [
+                7
+              ],
+              [
+                4
+              ],
+              [
+                1
+              ],
+              [
+                12
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 3,
+            "numExterneReunion": 3,
+            "numOrdre": 11,
+            "numExterne": 11,
+            "heureDepart": 1586685000000,
+            "libelle": "AUSTIN HANDICAP",
+            "libelleCourt": "AUSTIN HANDICAP",
+            "montantPrix": 228774,
+            "parcours": "",
+            "distance": 1400,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_DROITE",
+            "discipline": "PLAT",
+            "specialite": "PLAT",
+            "categorieParticularite": "HANDICAP",
+            "conditionAge": "TROIS_ANS_ET_PLUS",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 8080,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 228774,
+            "montantOffert1er": 0,
+            "montantOffert2eme": 0,
+            "montantOffert3eme": 0,
+            "montantOffert4eme": 0,
+            "montantOffert5eme": 0,
+            "conditions": "Pour pur sang males, hongres et femelles de trois ans et plus (Allocations d tribuées aux 5 premiers). Les informations concernant les partants sont comm iquées sous la responsabilité de l'autorité hippique du pays dans lequel la urse est organisée.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "infosJackpot": {
+                  "miseBase": 200,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": true,
+                "infosJackpot": {
+                  "miseBase": 400,
+                  "tauxContribution": {}
+                }
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "complement": false
+              },
+              {
+                "typePari": "E_PICK5",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_PICK5",
+                "spotAutorise": true,
+                "nbChevauxReglementaire": 5,
+                "ordre": false,
+                "combine": true,
+                "valeursFlexiAutorisees": [
+                  10,
+                  25,
+                  50
+                ],
+                "complement": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "spotAutorise": false,
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 80740,
+            "participants": [],
+            "ecuries": [],
+            "penetrometre": {
+              "intitule": ""
+            },
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "SHT",
+              "libelleCourt": "SHA TIN (HONG KONG)",
+              "libelleLong": "HIPPODROME DE SHA TIN HONG KONG"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                14
+              ],
+              [
+                1
+              ],
+              [
+                3
+              ],
+              [
+                8
+              ],
+              [
+                11
+              ],
+              [
+                5
+              ],
+              [
+                13
+              ],
+              [
+                6
+              ],
+              [
+                12
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                10
+              ],
+              [
+                7
+              ],
+              [
+                9
+              ]
+            ],
+            "hasEParis": true
+          }
+        ],
+        "audience": "NATIONAL",
+        "statut": "TERMINEE",
+        "disciplinesMere": [
+          "PLAT"
+        ],
+        "specialites": [
+          "PLAT"
+        ],
+        "derniereReunion": false,
+        "parisEvenement": [
+          {
+            "codePari": "E_PICK5",
+            "course": {
+              "dateProgramme": 1586642400000,
+              "numReunion": 3,
+              "numOrdre": 11
+            }
+          }
+        ],
+        "meteo": {
+          "datePrevision": 1586673900000,
+          "nebulositeCode": "P4",
+          "nebulositeLibelleCourt": "Peu Nuageux",
+          "nebulositeLibelleLong": "Le soleil l'emportera et les nuages resteront discrets.",
+          "temperature": 22,
+          "forceVent": 33,
+          "directionVent": "N"
+        },
+        "offresInternet": false,
+        "cagnottes": [],
+        "reportPlusFpaMax": 20
+      }
+    ],
+    "prochainesCoursesAPartir": [],
+    "datesProgrammesDisponibles": [
+      "13042026",
+      "14042026",
+      "15042026"
+    ]
+  },
+  "timestampPMU": {
+    "timestamp": 1776091284168,
+    "timezoneOffset": 7200000
+  }
+}

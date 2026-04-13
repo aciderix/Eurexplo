@@ -1,0 +1,4156 @@
+{
+  "programme": {
+    "cached": false,
+    "date": 1586124000000,
+    "timezoneOffset": 7200000,
+    "reunions": [
+      {
+        "cached": false,
+        "timezoneOffset": 7200000,
+        "dateReunion": 1586124000000,
+        "numOfficiel": 1,
+        "numOfficielReunionPrecedente": null,
+        "numOfficielReunionSuivante": 2,
+        "numExterne": 1,
+        "nature": "SEMINOCTURNE",
+        "hippodrome": {
+          "code": "N74",
+          "libelleCourt": "OSTERSUND(SUEDE)",
+          "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+        },
+        "pays": {
+          "code": "SWE",
+          "libelle": "Suède"
+        },
+        "courses": [
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 1,
+            "numExterne": 1,
+            "heureDepart": 1586190000000,
+            "libelle": "PRIX ENIVRANTE                          SUEDE",
+            "libelleCourt": "ENIVRANTE",
+            "montantPrix": 2779,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 7,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977401,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 2779,
+            "montantOffert1er": 955,
+            "montantOffert2eme": 478,
+            "montantOffert3eme": 334,
+            "montantOffert4eme": 239,
+            "montantOffert5eme": 201,
+            "conditions": "PRIX ENIVRANTE Course 01 Départ à l'Autostart 2.779 - Attelé. - 2.140 mètres. 955, 478, 334, 239, 201, 191. - 382 au fonds d'élevage. Pour 3 à 9 ans ayant gagné au moins 3.820, mais pas 14.325.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_ORDRE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_ORDRE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO_ORDRE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO_ORDRE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_SUPER_QUATRE",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_SUPER_QUATRE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 76040,
+            "participants": [],
+            "ecuries": [],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                6
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                3
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 2,
+            "numExterne": 2,
+            "heureDepart": 1586191320000,
+            "libelle": "PRIX ELITE D'ATOUT                      SUEDE",
+            "libelleCourt": "ELITE D'ATOUT",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 11,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977402,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX ELITE D'ATOUT Course 02 6.208 - Attelé. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 7 ans n'ayant pas gagné 2.388.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 167130,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  8
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                11
+              ],
+              [
+                6
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                10
+              ],
+              [
+                2
+              ],
+              [
+                1
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 3,
+            "numExterne": 3,
+            "heureDepart": 1586192700000,
+            "libelle": "PRIX EXOTIQUA                           SUEDE",
+            "libelleCourt": "EXOTIQUA",
+            "montantPrix": 12367,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 8,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977403,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 12367,
+            "montantOffert1er": 4775,
+            "montantOffert2eme": 2388,
+            "montantOffert3eme": 1671,
+            "montantOffert4eme": 1194,
+            "montantOffert5eme": 764,
+            "conditions": "PRIX EXOTIQUA Course 03 Départ à l'Autostart 12.367 - Attelé. femelles. - 2.140 mètres. 4.775, 2.388, 1.671, 1.194, 764, 525, 525. - 525 au fonds d'élevage. Pour pouliches de 4 ans ayant gagné au moins 2.388, mais pas 11.938.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_SUPER_QUATRE",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_SUPER_QUATRE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 162850,
+            "participants": [],
+            "ecuries": [],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                6
+              ],
+              [
+                7
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ],
+              [
+                1
+              ],
+              [
+                4
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 4,
+            "numExterne": 4,
+            "heureDepart": 1586194200000,
+            "libelle": "PRIX EASY WAY                           SUEDE",
+            "libelleCourt": "EASY WAY",
+            "montantPrix": 7229,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 8,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977404,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7229,
+            "montantOffert1er": 2865,
+            "montantOffert2eme": 1433,
+            "montantOffert3eme": 955,
+            "montantOffert4eme": 649,
+            "montantOffert5eme": 563,
+            "conditions": "PRIX EASY WAY Course 04 Départ à l'Autostart 7.229 - Attelé. femelles. - 2.140 mètres. 2.865, 1.433, 955, 649, 563, 478, 143. - 143 au fonds d'élevage. Pour juments de 3 à 7 ans ayant gagné au moins 7.163, mais pas 22.920.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_SUPER_QUATRE",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_SUPER_QUATRE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 160930,
+            "participants": [],
+            "ecuries": [],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                6
+              ],
+              [
+                8
+              ],
+              [
+                5
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                2
+              ],
+              [
+                1
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 5,
+            "numExterne": 5,
+            "heureDepart": 1586195520000,
+            "libelle": "PRIX ETOILE DU GANEP                    SUEDE",
+            "libelleCourt": "ETOILE DU GANEP",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 11,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977405,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX ETOILE DU GANEP Course 05 Départ à l'Autostart 6.208 - Attelé. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 6 ans ayant gagné au moins 2.388, mais pas 7.163.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_PICK5",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_PICK5",
+                "valeursFlexiAutorisees": [
+                  10,
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 5,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 163280,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  2,
+                  3
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                1
+              ],
+              [
+                11
+              ],
+              [
+                4
+              ],
+              [
+                6
+              ],
+              [
+                5
+              ],
+              [
+                10
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 6,
+            "numExterne": 6,
+            "heureDepart": 1586196840000,
+            "libelle": "PRIX EZIRA JOSSELYN                     SUEDE",
+            "libelleCourt": "EZIRA JOSSELYN",
+            "montantPrix": 7774,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 10,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977406,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7774,
+            "montantOffert1er": 3343,
+            "montantOffert2eme": 1671,
+            "montantOffert3eme": 1031,
+            "montantOffert4eme": 688,
+            "montantOffert5eme": 430,
+            "conditions": "PRIX EZIRA JOSSELYN Course 06 7.774 - Attelé. - 2.140 mètres. 3.343, 1.671, 1.031, 688, 430. - 611 au fonds d'élevage. Pour 4 ans n'ayant pas gagné 9.550. - recul de 20 m. à 5.730.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 195260,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  1,
+                  6
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                9
+              ],
+              [
+                5
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 7,
+            "numExterne": 7,
+            "heureDepart": 1586198160000,
+            "libelle": "PRIX ELSA DES AITRES                    SUEDE",
+            "libelleCourt": "ELSA DES AITRES",
+            "montantPrix": 7392,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977407,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7392,
+            "montantOffert1er": 3343,
+            "montantOffert2eme": 1671,
+            "montantOffert3eme": 1051,
+            "montantOffert4eme": 716,
+            "montantOffert5eme": 611,
+            "conditions": "PRIX ELSA DES AITRES Course 07 7.392. - Attelé. - 2.140 mètres. 3.343, 1.671, 1.051, 716, 611, , .- 659 au fonds d'élevage. Pour 3 à 8 ans ayant gagné au moins 7.163, mais pas 71.625. - recul de 20 m. à 28.650.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TIERCE",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TIERCE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "QUARTE_PLUS",
+                "miseBase": 130,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "QUARTE_PLUS",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_QUARTE_PLUS",
+                "miseBase": 130,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_QUARTE_PLUS",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "QUINTE_PLUS",
+                "miseBase": 200,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "nouveauQuinte": true,
+                "misEnPaiement": false,
+                "codePari": "QUINTE_PLUS",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_QUINTE_PLUS",
+                "miseBase": 200,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "nouveauQuinte": true,
+                "misEnPaiement": false,
+                "codePari": "E_QUINTE_PLUS",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "TIC_TROIS",
+                "miseBase": 430,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "TIC_TROIS",
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_TIC_TROIS",
+                "miseBase": 430,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TIC_TROIS",
+                "nbChevauxReglementaire": 5,
+                "ordre": true,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 159860,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  1
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                7
+              ],
+              [
+                6
+              ],
+              [
+                14
+              ],
+              [
+                4
+              ],
+              [
+                11
+              ],
+              [
+                9
+              ],
+              [
+                5
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 8,
+            "numExterne": 8,
+            "heureDepart": 1586199360000,
+            "libelle": "PRIX ELISE DU DONJON                    SUEDE",
+            "libelleCourt": "ELISE DU DONJON",
+            "montantPrix": 7086,
+            "parcours": "",
+            "distance": 1640,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977408,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 7086,
+            "montantOffert1er": 2865,
+            "montantOffert2eme": 1433,
+            "montantOffert3eme": 955,
+            "montantOffert4eme": 649,
+            "montantOffert5eme": 563,
+            "conditions": "PRIX ELISE DU DONJON Course 08 Départ à l'Autostart 7.086 - Attelé. - 1.640 mètres. 2.865, 1.433, 955, 649, 563. - 621 au fonds d'élevage. Pour 3 à 8 ans ayant gagné au moins 7.163, mais pas 71.625.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_PICK5",
+                "miseBase": 100,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_PICK5",
+                "valeursFlexiAutorisees": [
+                  10,
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 5,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 120870,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  4
+                ]
+              },
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  2
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                10
+              ],
+              [
+                1
+              ],
+              [
+                8
+              ],
+              [
+                9
+              ],
+              [
+                6
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 9,
+            "numExterne": 9,
+            "heureDepart": 1586200500000,
+            "libelle": "PRIX EASY DU CHENE                      SUEDE",
+            "libelleCourt": "EASY DU CHENE",
+            "montantPrix": 10410,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977409,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 10410,
+            "montantOffert1er": 4775,
+            "montantOffert2eme": 2388,
+            "montantOffert3eme": 1194,
+            "montantOffert4eme": 764,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX EASY DU CHENE Course 09 Départ à l'Autostart 10.410 - Attelé. - 2.140 mètres. 4.775, 2.388, 1.194, 764, 525. - 764 au fonds d'élevage. Pour 3 à 12 ans ayant gagné au moins 14.325, mais pas 47.750.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 183400,
+            "participants": [],
+            "ecuries": [],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                12
+              ],
+              [
+                6
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 1,
+            "numExterneReunion": 1,
+            "numOrdre": 10,
+            "numExterne": 10,
+            "heureDepart": 1586201580000,
+            "libelle": "PRIX ELMONICA                           SUEDE",
+            "libelleCourt": "ELMONICA",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "corde": "CORDE_GAUCHE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 11,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 977410,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX ELMONICA Course 10 6.208 - Attelé. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 11 ans ayant gagné au moins 1.910, mais pas 14.325. - recul de 20 m à 8.595.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 195700,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  9
+                ]
+              },
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  1
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "N74",
+              "libelleCourt": "OSTERSUND(SUEDE)",
+              "libelleLong": "HIPPODROME OSTERSUNDSUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                11
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                10
+              ],
+              [
+                4
+              ],
+              [
+                3
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          }
+        ],
+        "audience": "NATIONAL",
+        "statut": "TERMINEE",
+        "disciplinesMere": [
+          "TROT"
+        ],
+        "specialites": [
+          "TROT_ATTELE"
+        ],
+        "derniereReunion": false,
+        "parisEvenement": [
+          {
+            "codePari": "QUINTE_PLUS",
+            "course": {
+              "dateProgramme": 1586124000000,
+              "numReunion": 1,
+              "numOrdre": 7
+            }
+          },
+          {
+            "codePari": "E_QUINTE_PLUS",
+            "course": {
+              "dateProgramme": 1586124000000,
+              "numReunion": 1,
+              "numOrdre": 7
+            }
+          },
+          {
+            "codePari": "E_PICK5",
+            "course": {
+              "dateProgramme": 1586124000000,
+              "numReunion": 1,
+              "numOrdre": 5
+            }
+          },
+          {
+            "codePari": "E_PICK5",
+            "course": {
+              "dateProgramme": 1586124000000,
+              "numReunion": 1,
+              "numOrdre": 8
+            }
+          }
+        ],
+        "meteo": {
+          "datePrevision": 1586155500000,
+          "nebulositeCode": "P4",
+          "nebulositeLibelleCourt": "Peu Nuageux",
+          "nebulositeLibelleLong": "Le soleil l'emportera et les nuages resteront discrets.",
+          "temperature": 7,
+          "forceVent": 20,
+          "directionVent": "S"
+        },
+        "offresInternet": false,
+        "cagnottes": [],
+        "reportPlusFpaMax": 20
+      },
+      {
+        "cached": false,
+        "timezoneOffset": 7200000,
+        "dateReunion": 1586124000000,
+        "numOfficiel": 2,
+        "numOfficielReunionPrecedente": 1,
+        "numOfficielReunionSuivante": null,
+        "numExterne": 2,
+        "nature": "SEMINOCTURNE",
+        "hippodrome": {
+          "code": "HAL",
+          "libelleCourt": "HALMSTAD",
+          "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+        },
+        "pays": {
+          "code": "SWE",
+          "libelle": "Suède"
+        },
+        "courses": [
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 1,
+            "numExterne": 1,
+            "heureDepart": 1586190600000,
+            "libelle": "PRIX DESIRADE DES FEUX                  SUEDE",
+            "libelleCourt": "DESIRADE FEUX",
+            "montantPrix": 10314,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "FEMELLES",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996901,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 10314,
+            "montantOffert1er": 3820,
+            "montantOffert2eme": 1910,
+            "montantOffert3eme": 1433,
+            "montantOffert4eme": 1003,
+            "montantOffert5eme": 669,
+            "conditions": "PRIX DESIRADE DES FEUX Course 01 10.314 - Attelé. femelles. - 2.140 mètres. 3.820, 1.910, 1.433, 1.003, 669, 525, 478. - 478 au fonds d'élevage. Pour pouliches de 3 ans n'ayant pas gagné 2.388.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 78000,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  3,
+                  6
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                12
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                10
+              ],
+              [
+                1
+              ],
+              [
+                7
+              ],
+              [
+                8
+              ],
+              [
+                5
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 2,
+            "numExterne": 2,
+            "heureDepart": 1586191980000,
+            "libelle": "PRIX DO WIND                            SUEDE",
+            "libelleCourt": "DO WIND",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 1640,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996902,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX DO WIND Course 02 Départ à l'Autostart 6.208 - Attelé. - 1.640 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 8 ans ayant gagné au moins 4.298, mais pas 17.668.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 119720,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  3,
+                  6,
+                  11
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                12
+              ],
+              [
+                9
+              ],
+              [
+                5
+              ],
+              [
+                8
+              ],
+              [
+                1
+              ],
+              [
+                10
+              ],
+              [
+                7
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 3,
+            "numExterne": 3,
+            "heureDepart": 1586193300000,
+            "libelle": "PRIX DOCEANIDE DU LILAS                 SUEDE",
+            "libelleCourt": "DOCEANIDE LILAS",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 14,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996903,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX DOCEANIDE DU LILAS Course 03 6.208 - Attelé. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 8 ans n'ayant pas gagné 3.629. - recul de 20 m. à 1.242.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 166060,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  11
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  12
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                1
+              ],
+              [
+                8
+              ],
+              [
+                2
+              ],
+              [
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                4
+              ],
+              [
+                13
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 4,
+            "numExterne": 4,
+            "heureDepart": 1586194680000,
+            "libelle": "PRIX DALJEMOSA                          SUEDE",
+            "libelleCourt": "DALJEMOSA",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996904,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX DALJEMOSA Course 04 Départ à l'Autostart 6.208 - Attelé. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 10 ans ayant gagné au moins 2.388, mais pas 13.848.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 160290,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  7
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  12
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                2,
+                4
+              ],
+              [
+                9
+              ],
+              [
+                3
+              ],
+              [
+                8
+              ],
+              [
+                10
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 5,
+            "numExterne": 5,
+            "heureDepart": 1586196000000,
+            "libelle": "PRIX DANSE AVEC LE FEU                  SUEDE",
+            "libelleCourt": "DANSE LE FEU",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 15,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996905,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX DANSE AVEC LE FEU Course 05 6.208 - Attelé. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 12 ans ayant gagné au moins 3.343, mais pas 95.023. - recul de 20 m à 12.893, de 40 m. à 35.335.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 160500,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "NON_PARTANT",
+                "numeroParticipants": [
+                  5
+                ]
+              },
+              {
+                "type": "DISQUALIFIE_POUR_ALLURE_IRREGULIERE",
+                "numeroParticipants": [
+                  9
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                4,
+                7
+              ],
+              [
+                8
+              ],
+              [
+                12
+              ],
+              [
+                14
+              ],
+              [
+                13
+              ],
+              [
+                11
+              ],
+              [
+                10
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 6,
+            "numExterne": 6,
+            "heureDepart": 1586197320000,
+            "libelle": "PRIX DONDOLFIERE                        SUEDE",
+            "libelleCourt": "DONDOLFIERE",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2640,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "AUTOSTART",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 12,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996906,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX DONDOLFIERE Course 06 Départ à l'Autostart 6.208 - Attelé. - 2.640 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 3 à 10 ans ayant gagné au moins 17.668, mais pas 53.003.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 198260,
+            "participants": [],
+            "ecuries": [],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                5
+              ],
+              [
+                1
+              ],
+              [
+                11
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                12
+              ],
+              [
+                9
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 7,
+            "numExterne": 7,
+            "heureDepart": 1586198640000,
+            "libelle": "PRIX DREA JOSSELYN                      SUEDE",
+            "libelleCourt": "DREA JOSSELYN",
+            "montantPrix": 6208,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "MONTE",
+            "specialite": "TROT_MONTE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 13,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996907,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 6208,
+            "montantOffert1er": 2388,
+            "montantOffert2eme": 1194,
+            "montantOffert3eme": 812,
+            "montantOffert4eme": 621,
+            "montantOffert5eme": 525,
+            "conditions": "PRIX DREA JOSSELYN Course 07 6.208 - Monté. - 2.140 mètres. 2.388, 1.194, 812, 621, 525, 430. - 239 au fonds d'élevage. Pour 4 à 10 ans ayant gagné au moins 3.343, mais pas 38.200. - recul de 20 m à 16.713.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MINI_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MINI_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 162220,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  3,
+                  12
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                9
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                7
+              ],
+              [
+                4
+              ],
+              [
+                13
+              ],
+              [
+                8
+              ],
+              [
+                11
+              ]
+            ],
+            "hasEParis": true
+          },
+          {
+            "cached": false,
+            "departImminent": false,
+            "arriveeDefinitive": true,
+            "timezoneOffset": 7200000,
+            "numReunion": 2,
+            "numExterneReunion": 2,
+            "numOrdre": 8,
+            "numExterne": 8,
+            "heureDepart": 1586200260000,
+            "libelle": "PRIX DIRA                               SUEDE",
+            "libelleCourt": "DIRA",
+            "montantPrix": 2779,
+            "parcours": "",
+            "distance": 2140,
+            "distanceUnit": "METRE",
+            "discipline": "ATTELE",
+            "specialite": "TROT_ATTELE",
+            "categorieParticularite": "INCONNU",
+            "conditionSexe": "TOUS_CHEVAUX",
+            "nombreDeclaresPartants": 15,
+            "grandPrixNationalTrot": false,
+            "numSocieteMere": 996908,
+            "pariMultiCourses": false,
+            "pariSpecial": false,
+            "montantTotalOffert": 2779,
+            "montantOffert1er": 955,
+            "montantOffert2eme": 478,
+            "montantOffert3eme": 334,
+            "montantOffert4eme": 239,
+            "montantOffert5eme": 201,
+            "conditions": "PRIX DIRA Course 08 2.779 - Attelé. - 2.140 mètres. 955, 478, 334, 239, 201, 191. - 382 au fonds d'élevage. Pour 3 à 11 ans ayant gagné au moins 2.388, mais pas 71.148. - recul de 20 m à 9.550, de 40 m. à 26.263.",
+            "numCourseDedoublee": 0,
+            "paris": [
+              {
+                "typePari": "E_SIMPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_GAGNANT",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_SIMPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_SIMPLE_PLACE",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": true,
+                "complement": false,
+                "spotAutorise": false
+              },
+              {
+                "typePari": "E_COUPLE_GAGNANT",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_GAGNANT",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_COUPLE_PLACE",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_COUPLE_PLACE",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_DEUX_SUR_QUATRE",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": true,
+                "misEnPaiement": false,
+                "codePari": "E_DEUX_SUR_QUATRE",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 2,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_TRIO",
+                "miseBase": 150,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_TRIO",
+                "valeursFlexiAutorisees": [
+                  50
+                ],
+                "nbChevauxReglementaire": 3,
+                "ordre": false,
+                "combine": true,
+                "complement": true,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_MULTI",
+                "miseBase": 300,
+                "enVente": false,
+                "audience": "NATIONAL",
+                "reportable": false,
+                "misEnPaiement": false,
+                "codePari": "E_MULTI",
+                "valeursFlexiAutorisees": [
+                  25,
+                  50
+                ],
+                "nbChevauxReglementaire": 4,
+                "ordre": false,
+                "combine": true,
+                "valeursRisqueAutorisees": [
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "complement": false,
+                "spotAutorise": true
+              },
+              {
+                "typePari": "E_REPORT_PLUS",
+                "enVente": false,
+                "reportable": false,
+                "codePari": "E_REPORT_PLUS",
+                "nbChevauxReglementaire": 1,
+                "ordre": false,
+                "combine": false,
+                "complement": false,
+                "spotAutorise": false
+              }
+            ],
+            "statut": "FIN_COURSE",
+            "categorieStatut": "ARRIVEE",
+            "dureeCourse": 163080,
+            "participants": [],
+            "ecuries": [],
+            "incidents": [
+              {
+                "type": "DISTANCE",
+                "numeroParticipants": [
+                  3,
+                  11
+                ]
+              }
+            ],
+            "rapportsDefinitifsDisponibles": true,
+            "isArriveeDefinitive": true,
+            "isDepartImminent": false,
+            "isDepartAJPlusUn": false,
+            "cagnottes": [],
+            "pronosticsExpires": true,
+            "replayDisponible": false,
+            "hippodrome": {
+              "codeHippodrome": "HAL",
+              "libelleCourt": "HALMSTAD",
+              "libelleLong": "HIPPODROME DE HALMSTAD SUEDE"
+            },
+            "epcPourTousParis": true,
+            "courseTrackee": false,
+            "courseExclusiveInternet": false,
+            "formuleChampLibreIndisponible": false,
+            "ordreArrivee": [
+              [
+                7
+              ],
+              [
+                10
+              ],
+              [
+                1
+              ],
+              [
+                13
+              ],
+              [
+                9
+              ],
+              [
+                6
+              ],
+              [
+                15
+              ],
+              [
+                12
+              ]
+            ],
+            "hasEParis": true
+          }
+        ],
+        "audience": "NATIONAL",
+        "statut": "TERMINEE",
+        "disciplinesMere": [
+          "TROT"
+        ],
+        "specialites": [
+          "TROT_ATTELE",
+          "TROT_MONTE"
+        ],
+        "derniereReunion": false,
+        "parisEvenement": [],
+        "meteo": {
+          "datePrevision": 1586155500000,
+          "nebulositeCode": "P1",
+          "nebulositeLibelleCourt": "Soleil",
+          "nebulositeLibelleLong": "Le soleil brillera généreusement.",
+          "temperature": 11,
+          "forceVent": 22,
+          "directionVent": "S"
+        },
+        "offresInternet": false,
+        "cagnottes": [],
+        "reportPlusFpaMax": 20
+      }
+    ],
+    "prochainesCoursesAPartir": [],
+    "datesProgrammesDisponibles": [
+      "13042026",
+      "14042026",
+      "15042026"
+    ]
+  },
+  "timestampPMU": {
+    "timestamp": 1776091284131,
+    "timezoneOffset": 7200000
+  }
+}
