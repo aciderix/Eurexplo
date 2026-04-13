@@ -46,7 +46,6 @@ def load_progress():
 
 
 def save_progress(data):
-    data["done_dates"] = data.get("done_dates", [])[-500:]
     data["updated"] = datetime.now().isoformat()
     with open(PROGRESS_FILE, "w") as f:
         json.dump(data, f)
