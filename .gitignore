@@ -7,3 +7,10 @@
 # Python
 __pycache__/
 *.pyc
+
+# PMU data cache (large, not needed in repo)
+pmu_programmes_cache/
+httpsoffline.turfinfo.api.pmu.frrestclient7programme/
+pmu_daily_json/
+pmu_full_dataset.csv
+pmu_data.csv
