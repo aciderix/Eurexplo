@@ -1,0 +1,115 @@
+{
+  "name": "PMU AI Predictor",
+  "version": "1.0.0",
+  "description": "Application de prédiction pour les courses hippiques PMU — utilise un modèle GradientBoosting entrainé sur les données historiques pour identifier les paris avec un edge positif.",
+  "strategies": [
+    {
+      "id": "HIGH_CONF",
+      "name": "Confiance haute",
+      "emoji": "🟢",
+      "color": "#22c55e",
+      "min_prob": 0.70,
+      "odds_range": [1.5, 10.0],
+      "field_range": [3, 25],
+      "default_stake": 10.0,
+      "description": "Paris rares mais winrate maximal. Cibles: favoris avec forte probabilité modèle."
+    },
+    {
+      "id": "MEDIUM_CONF",
+      "name": "Confiance medium",
+      "emoji": "🟡",
+      "color": "#eab308",
+      "min_prob": 0.50,
+      "odds_range": [1.5, 8.0],
+      "field_range": [4, 20],
+      "default_stake": 5.0,
+      "description": "Équilibre winrate/volume. Bon pour usage quotidien modéré."
+    },
+    {
+      "id": "EDGE_ONLY",
+      "name": "Edge sur cotes",
+      "emoji": "🔵",
+      "color": "#3b82f6",
+      "min_prob": 0.40,
+      "odds_range": [2.0, 5.0],
+      "field_range": [4, 25],
+      "default_stake": 3.0,
+      "description": "Volume max, edge stable. Stratégie de diversification."
+    }
+  ],
+  "model": {
+    "type": "GradientBoostingClassifier",
+    "n_estimators": 300,
+    "max_depth": 5,
+    "subsample": 0.8,
+    "min_samples_leaf": 5,
+    "features": ["final_odds", "morning_odds", "drift", "odds_rank", "final_rank", "odds_ratio", "inv_odds", "n_partants"],
+    "feature_importances": {
+      "inv_odds": 0.2588,
+      "final_odds": 0.1492,
+      "morning_odds": 0.1238,
+      "odds_ratio": 0.1211,
+      "drift": 0.1164,
+      "n_partants": 0.0838,
+      "final_rank": 0.0786,
+      "odds_rank": 0.0683
+    }
+  },
+  "backtest_results": {
+    "test_period": "2025-12-09 → 2026-03-10",
+    "test_n_runners": 19879,
+    "strategies": [
+      {
+        "id": "HIGH_CONF",
+        "n_bets": 301,
+        "win_rate": 0.532,
+        "avg_odds": 2.83,
+        "avg_edge": 0.364,
+        "pnl": 127.96,
+        "roi": 0.043,
+        "bets_per_month": 15,
+        "daily_exposure_eur": 4.9
+      },
+      {
+        "id": "MEDIUM_CONF",
+        "n_bets": 740,
+        "win_rate": 0.504,
+        "avg_odds": 3.67,
+        "avg_edge": 0.316,
+        "pnl": 382.19,
+        "roi": 0.103,
+        "bets_per_month": 32,
+        "daily_exposure_eur": 5.4
+      },
+      {
+        "id": "EDGE_ONLY",
+        "n_bets": 1075,
+        "win_rate": 0.458,
+        "avg_odds": 3.96,
+        "avg_edge": 0.277,
+        "pnl": 250.67,
+        "roi": 0.078,
+        "bets_per_month": 47,
+        "daily_exposure_eur": 4.7
+      }
+    ],
+    "total_pnl": 760.82,
+    "total_roi": 0.117
+  },
+  "usage": {
+    "daily_budget_recommended": "5-10 EUR",
+    "target_win_rate": ">50%",
+    "max_monthly_bets": 50,
+    "risk_management": "Kelly fraction = 1/4, stake capped at 4x base"
+  },
+  "data_sources": [
+    {"name": "race_results.csv", "source": "Kaggle zoupet/horses-races-results-20252026", "rows": 38314},
+    {"name": "PMU France Open API", "source": "open-pmu-api.vercel.app", "status": "active"}
+  ],
+  "requirements": [
+    "python >= 3.10",
+    "scikit-learn",
+    "numpy",
+    "pandas"
+  ]
+}

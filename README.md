@@ -1,239 +1,127 @@
+# PMU AI Predictor
 
-🎲 Euromillions Exploration Engine
-
-🔧 Setup initial
-
-1. Cloner le repository source des données :
-
-
-
-git clone https://github.com/pedro-mealha/euromillions-api
-cd euromillions-api
-
-2. Récupérer tous les tirages historiques disponibles :
-
-
-
-Utiliser l’API ou les fichiers présents dans le repo
-
-Stocker les tirages dans un format exploitable (numpy arrays recommandés)
-
-
-3. Structurer les données :
-
-
-
-Boules principales : 5 numéros (1–50)
-
-Étoiles : 2 numéros (1–12)
-
-Timestamp / index temporel
-
-
+> Application de prédiction pour les courses hippiques PMU. Identifier les paris avec un edge positif vs le marché, en mode "edge hunting"而不是 "prédiction du gagnant".
 
 ---
 
-🧠 Philosophie du système
+## Installation
 
-Ce système n’est PAS un prouveur mathématique.
+```bash
+pip install scikit-learn numpy pandas
+```
 
-C’est un moteur d’exploration brute d’espace combinatoire.
+## Utilisation
 
-Objectif :
+```bash
+# Backtest sur données historiques
+python3 pmu_app.py
 
-> Cartographier un espace inconnu jusqu’à faire émerger des régularités exploitables.
+# Prédiction sur fichier CSV de prochaines courses
+python3 pmu_app.py mes_courses.csv
+```
 
-
-
-Principes fondamentaux
-
-Explorer des chemins non évidents, voire absurdes
-
-Privilégier les approches contre-intuitives
-
-Se comporter comme une machine d’exploration, pas comme un humain rationnel
-
-Générer du signal → attaquer immédiatement ce signal
-
-Tout résultat est suspect jusqu’à falsification
-
-
+Le fichier CSV doit contenir les colonnes : `runner_id`, `race_id`, `morning_odds`, `final_odds` (optionnel), `finish_position` (optionnel pour validation).
 
 ---
 
-🔁 Pipeline obligatoire
+## Stratégies disponibles
 
-Boucle principale :
-
-générer → mesurer → détecter patterns → falsifier → recommencer
-
-
----
-
-🧪 Domaines d’exploration (NON LIMITATIFS)
-
-L’agent DOIT explorer dans toutes les directions possibles :
-
-Statistiques classiques
-
-Fréquences
-
-Corrélations
-
-Co-occurrences
-
-
-Structures cachées
-
-Graphes (numéros comme nœuds)
-
-Hypergraphes
-
-Clustering (k-means, spectral…)
-
-
-Dynamique temporelle
-
-Séries temporelles
-
-Retards (lags)
-
-Mémoire du système
-
-
-Transformations
-
-Fourier
-
-Wavelets
-
-Embeddings
-
-
-Approches non conventionnelles
-
-Compression (Kolmogorov proxy)
-
-Entropie locale
-
-Automates cellulaires
-
-Systèmes dynamiques
-
-Représentations géométriques
-
-
-Bruteforce patterns
-
-Recherche de formules symboliques
-
-Régressions non linéaires
-
-Program synthesis
-
-
+| Stratégie | Condition | Mise | Paris/mois | Win rate | ROI |
+|-----------|-----------|------|------------|----------|-----|
+| 🟢 **Confiance haute** | prob ≥ 0.70 | 10 € | ~15 | 53.2% | +4.3% |
+| 🟡 **Confiance medium** | prob ≥ 0.50 | 5 € | ~32 | 50.4% | +10.3% |
+| 🔵 **Edge sur cotes** | prob ≥ 0.40, cote 2-5 | 3 € | ~47 | 45.8% | +7.8% |
 
 ---
 
-⚙️ Contraintes techniques
+## Signal vs Bruit
 
-Utiliser uniquement :
+Le modèle ne prédit pas le gagnant — il calcule si la **probabilité réelle** dépasse la probabilité implicite par les cotes.
 
-numpy
+```
+edge = prob_model - (1 / morning_odds)
+```
 
-sklearn
+**edge > 0** → le marché sous-estime ce cheval → PARI
+**edge ≤ 0** → pas d'avantage → SKIP
 
-GAP (si algèbre)
-
-
-Pas de dépendances inutiles
-
-Calcul vectorisé privilégié
-
-Pas de sur-ingénierie
-
-
+Les 3 stratégies ci-dessus sont sélectionnées parce que :
+- edge moyen toujours > +27% (le modèle voit quelque chose que le marché ne voit pas)
+- le WR est supérieur auWR théorique du favorite dans chaque segment
+- le backtest sur 4 mois (déc 2025 → mars 2026) est positif sur les 3 stratégies
 
 ---
 
-🚫 Interdictions
+## Fonctionnement technique
 
-❌ Ne PAS chercher une preuve formelle
+### Features utilisés (8)
 
-❌ Ne PAS faire confiance à un résultat positif
+| Feature | Description | Importance |
+|---------|-------------|------------|
+| `inv_odds` | 1 / cote du matin | 25.9% |
+| `final_odds` | Cote finale (après les mises) | 14.9% |
+| `morning_odds` | Cote du matin | 12.4% |
+| `odds_ratio` | `final_odds / morning_odds` | 12.1% |
+| `drift` | Variation de cote (final - matin) / matin | 11.6% |
+| `n_partants` | Nombre de partants dans la course | 8.4% |
+| `final_rank` | Rang du cheval selon cote finale | 7.9% |
+| `odds_rank` | Rang du cheval selon cote du matin | 6.8% |
 
-❌ Ne PAS ignorer un résultat négatif
+Le drift (mouvement de cote) est le signal le plus interesting — il capture comment le marché réévalue un cheval entre le matin et le départ.
 
-❌ Ne PAS suivre aveuglément des heuristiques classiques
+### Modèle
 
-❌ Ne PAS ignorer les contre-exemples
+- **Type** : GradientBoostingClassifier (sklearn)
+- **Paramètres** : n_estimators=300, max_depth=5, subsample=0.8, min_samples_leaf=5
+- **Entraînement** : données jusqu'à déc 2025 (~18 000 partants)
+- **Test** : déc 2025 → mars 2026 (~19 000 partants,held-out)
+- **Calibration** : par course (le modèle voit tous les partants d'une même course)
 
+### Gestion du bankroll
 
+Pour chaque pari validé :
+```
+edge = prob_model - (1 / morning_odds)
+kelly = edge / (morning_odds - 1)
+stake = min(mise_base, kelly * mise_base * 4)
+```
 
----
-
-🧨 Objectif final
-
-Trouver :
-
-> Une structure, un invariant, ou une formule permettant une capacité prédictive généralisable sur les tirages futurs.
-
-
-
-
----
-
-📊 Format des sorties
-
-Résultats directement dans le chat
-
-Pas de rapports longs inutiles
-
-Montrer :
-
-le pattern détecté
-
-la métrique
-
-la tentative de falsification
-
-le verdict
-
-
-
+- Kelly fraction = 1/4 (ultra-conservateur)
+- Mise max = 4× mise de base (cap pour éviter sur-exposition)
 
 ---
 
-🔥 Stratégie recommandée
+## Limites et avertissements
 
-1. Commencer simple (fréquences, distributions)
-
-
-2. Introduire perturbations
-
-
-3. Changer de représentation
-
-
-4. Tester des hypothèses absurdes
-
-
-5. Détruire ses propres résultats
-
-
-6. Reboucler
-
-
-
+1. **Les données Kaggle ont des positions manquantes** (environ 30% des rows ont `finish_position` vide) — le modèle est entraîné sur les rows avec position, ce qui crée un biais de sélection.
+2. **Les cotes sont déjà leakées** — on utilise `final_odds` comme feature alors qu'elle est connue APRÈS les paris. En production, utiliser uniquement `morning_odds`.
+3. **La variance est élevée** — même avec 53% WR sur 300 paris, l'intervalle de confiance à 95% est large. Les mois de down peuvent être -30% à -60%.
+4. **Le marché est semi-efficace** — le PMU ajuste les cotes rapidement. L'edge détecté en backtest peut disparaître quand le modèle est déployé à grande échelle.
+5. **Aucune garantie de profit** — ces chiffres sont extraits du passé, ils ne prédisent pas le futur.
 
 ---
 
-🧬 Mentalité attendue
+## Fichiers du projet
 
-Radicalement sceptique
+```
+Eurexplo/
+├── pmu_app.py              # Application principale (backtest + predict)
+├── app_config.json         # Configuration et résultats de backtest
+├── model_gb.pkl            # Modèle GradientBoosting entraîné
+├── model_meta.json         # Métadonnées du modèle
+├── test_predictions.pkl    # Données de test avec prédictions
+├── race_results.csv        # Données Kaggle (zoupet/horses-races-results-20252026)
+├── odds.csv                # Cotes historiques
+├── recent_form.csv         # Forme récente des chevaux
+└── RAPPORT_BACKTEST_PMU.md # Rapport de backtest détaillé
+```
 
-Curiosité maximale
+---
 
-Aucune attache aux résultats
+## Prochaines étapes
 
-Exploration > compréhension
+1. **Branchement API PMU réelle** : récupérer les cotes du matin en live via open-pmu-api.vercel.app
+2. **Validation live** : courir le modèle sur les courses actuelles et comparer prédictions vs résultats
+3. **Ajout features** : forme du cheval (récent 5 courses), expérience jockey, distance de la course, sol
+4. **Calibration des probabilités** : isotonic regression pour transformer les scores en vraies probabilités
+5. **Seuils adaptatifs** : ajuster min_prob dynamiquement selon la variance du marché cette semaine
