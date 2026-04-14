@@ -37,3 +37,4 @@ pmu_data_all.zip
 
 # Scraper logs
 scraper_async.log
+scraper_monitor.log
