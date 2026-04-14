@@ -216,7 +216,7 @@ async def run(start_date, end_date):
     )
 
     t0 = time.time()
-    async with aiohttp.ClientSession(headers=HEADERS, connector=connector) as session:
+    async with aiohttp.ClientSession(headers=HEADERS, connector=connector, trust_env=True) as session:
         try:
             async with session.get("https://www.pmu.fr/", ssl=False,
                                    timeout=aiohttp.ClientTimeout(total=15)) as _:
