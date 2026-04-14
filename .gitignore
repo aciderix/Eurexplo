@@ -19,3 +19,10 @@ pmu_data.csv
 pmu_dataset.parquet
 pmu_features.parquet
 
+# Secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
