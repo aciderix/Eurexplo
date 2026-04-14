@@ -30,3 +30,10 @@ secrets/
 # Supabase CLI temp state
 supabase/.temp/
 supabase/.branches/
+
+# Large data directories (stored in Google Drive / Storage, not git)
+pmu_data/
+pmu_data_all.zip
+
+# Scraper logs
+scraper_async.log
