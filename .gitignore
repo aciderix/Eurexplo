@@ -26,3 +26,7 @@ pmu_features.parquet
 *.key
 *.pem
 secrets/
+
+# Supabase CLI temp state
+supabase/.temp/
+supabase/.branches/
