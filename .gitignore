@@ -14,3 +14,8 @@ httpsoffline.turfinfo.api.pmu.frrestclient7programme/
 pmu_daily_json/
 pmu_full_dataset.csv
 pmu_data.csv
+
+# Large derived parquet files (regeneratable from pmu_daily_json/)
+pmu_dataset.parquet
+pmu_features.parquet
+
