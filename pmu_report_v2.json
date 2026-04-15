@@ -1,0 +1,136 @@
+{
+  "folds": [
+    {
+      "fold": "train->2017  val=2018",
+      "auc": 0.7966,
+      "n_trees": 186,
+      "roi_top1": {
+        "bets": 15297,
+        "roi": 6.0,
+        "win_rate": null
+      },
+      "roi_value": {
+        "bets": 7257,
+        "roi": 26.0
+      }
+    },
+    {
+      "fold": "train->2018  val=2019",
+      "auc": 0.793,
+      "n_trees": 135,
+      "roi_top1": {
+        "bets": 12463,
+        "roi": 8.7
+      },
+      "roi_value": {
+        "bets": 5948,
+        "roi": 31.3
+      }
+    },
+    {
+      "fold": "train->2019  val=2020",
+      "auc": 0.7853,
+      "n_trees": 226,
+      "roi_top1": {
+        "bets": 12109,
+        "roi": 8.6
+      },
+      "roi_value": {
+        "bets": 6045,
+        "roi": 27.1
+      }
+    },
+    {
+      "fold": "train->2020  val=2021",
+      "auc": 0.7813,
+      "n_trees": 247,
+      "roi_top1": {
+        "bets": 14349,
+        "roi": 6.1
+      },
+      "roi_value": {
+        "bets": 7317,
+        "roi": 24.2
+      }
+    },
+    {
+      "fold": "train->2021  val=2022",
+      "auc": 0.7893,
+      "n_trees": 346,
+      "roi_top1": {
+        "bets": 15381,
+        "roi": 9.6
+      },
+      "roi_value": {
+        "bets": 7432,
+        "roi": 27.7
+      }
+    },
+    {
+      "fold": "train->2022  val=2023",
+      "auc": 0.7867,
+      "n_trees": 269,
+      "roi_top1": {
+        "bets": 15181,
+        "roi": 9.1
+      },
+      "roi_value": {
+        "bets": 7074,
+        "roi": 30.7
+      }
+    },
+    {
+      "fold": "train->2023  val=2024",
+      "auc": 0.7874,
+      "n_trees": 222,
+      "roi_top1": {
+        "bets": 15382,
+        "roi": 8.2
+      },
+      "roi_value": {
+        "bets": 7341,
+        "roi": 28.8
+      }
+    },
+    {
+      "fold": "train->2024  val=2025",
+      "auc": 0.7877,
+      "n_trees": 175,
+      "roi_top1": {
+        "bets": 15500,
+        "roi": 9.3
+      },
+      "roi_value": {
+        "bets": 6810,
+        "roi": 30.2
+      }
+    },
+    {
+      "fold": "FINAL val=2026",
+      "auc": 0.7935,
+      "n_trees": 260,
+      "roi_top1": {
+        "bets": 4220,
+        "roi": 20.8
+      },
+      "roi_value": {
+        "bets": 2063,
+        "roi": 46.4
+      }
+    }
+  ],
+  "mean_auc": 0.7884,
+  "std_auc": 0.0044,
+  "mean_roi_top1": 8.2,
+  "mean_roi_value": 28.2,
+  "final_auc": 0.7935,
+  "final_roi_top1": {
+    "bets": 4220,
+    "roi": 20.8
+  },
+  "final_roi_value": {
+    "bets": 2063,
+    "roi": 46.4
+  },
+  "note": "Model: LightGBM, walk-forward CV 2018-2025. ROI value = bet only when pred_proba > 1/odds."
+}
