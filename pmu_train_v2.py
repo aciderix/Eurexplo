@@ -415,7 +415,7 @@ def main() -> int:
         "final_roi_value": final["roi_value"],
         "top30_features": final["feat_importance"],
     }
-    OUT_REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False))
+    OUT_REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=True), encoding="utf-8")
     print(f"Rapport sauvegardé : {OUT_REPORT}\n")
 
     # Top features

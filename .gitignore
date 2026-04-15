@@ -20,6 +20,8 @@ pmu_dataset.parquet
 pmu_features.parquet
 pmu_course_raw_v2.parquet
 pmu_dataset_v2.parquet
+pmu_features_v2.parquet
+pmu_feat_*.parquet
 build_v2.log
 
 # Secrets — NEVER commit
