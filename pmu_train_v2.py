@@ -318,9 +318,10 @@ def run_fold(train_df: pd.DataFrame, val_df: pd.DataFrame, fold_name: str) -> di
                 val_fe[c].isin([True, False, 1, 0]), other=np.nan), errors="coerce")
         try:
             train_fe[c].astype(np.float32)
+            val_fe[c].astype(np.float32)
             safe_cols.append(c)
         except (ValueError, TypeError):
-            pass  # still a string column, drop it
+            pass  # string column in train or val, drop it
     feat_cols = safe_cols
 
     X_tr = train_fe[feat_cols].values.astype(np.float32)
