@@ -295,20 +295,24 @@ def run_fold(train_df: pd.DataFrame, val_df: pd.DataFrame, fold_name: str) -> di
     feat_cols = feature_columns(train_fe)
     feat_cols = [c for c in feat_cols if c in val_fe.columns]
 
-    # Cast object columns that contain bools/numbers; drop true strings
-    kept = []
+    # Keep only columns that can be safely cast to float32
+    safe_cols = []
     for c in feat_cols:
-        if train_fe[c].dtype == object:
-            converted = pd.to_numeric(train_fe[c].map({True: 1, False: 0, None: None}),
-                                      errors="coerce")
-            if converted.notna().mean() > 0.5:
-                train_fe[c] = converted
-                val_fe[c]   = pd.to_numeric(val_fe[c].map({True: 1, False: 0, None: None}),
-                                            errors="coerce")
-                kept.append(c)
-        else:
-            kept.append(c)
-    feat_cols = kept
+        col = train_fe[c]
+        if col.dtype == object:
+            col = pd.to_numeric(col.map({True: 1, False: 0}).where(
+                col.isin([True, False, 1, 0]), other=np.nan), errors="coerce")
+            if col.notna().mean() < 0.1:
+                continue  # true string column, skip
+            train_fe[c] = col
+            val_fe[c]   = pd.to_numeric(val_fe[c].map({True: 1, False: 0}).where(
+                val_fe[c].isin([True, False, 1, 0]), other=np.nan), errors="coerce")
+        try:
+            train_fe[c].astype(np.float32)
+            safe_cols.append(c)
+        except (ValueError, TypeError):
+            pass  # still a string column, drop it
+    feat_cols = safe_cols
 
     X_tr = train_fe[feat_cols].values.astype(np.float32)
     y_tr = train_fe["won"].fillna(0).astype(int).values
