@@ -355,8 +355,16 @@ def main() -> int:
 
     print("Chargement du parquet…")
     t0 = time.time()
-    df = pq.read_table(args.parquet, columns=LOAD_COLS).to_pandas()
-    print(f"  {len(df):,} lignes  ({time.time()-t0:.1f}s)")
+    # Si le parquet est enrichi (pmu_features_v2), charger toutes les colonnes
+    available = pq.read_schema(args.parquet).names
+    is_enriched = any(c.startswith(("elo_", "ent_", "mus_n_", "te_")) for c in available)
+    if is_enriched:
+        print(f"  Parquet enrichi détecté ({len(available)} colonnes) — chargement complet")
+        df = pq.read_table(args.parquet).to_pandas()
+    else:
+        cols_to_load = [c for c in LOAD_COLS if c in available]
+        df = pq.read_table(args.parquet, columns=cols_to_load).to_pandas()
+    print(f"  {len(df):,} lignes  {df.shape[1]} cols  ({time.time()-t0:.1f}s)")
 
     # Filtrer les lignes sans résultat connu (courses futures)
     df = df[df["won"].notna()].copy()
