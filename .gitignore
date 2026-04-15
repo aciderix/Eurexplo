@@ -34,6 +34,7 @@ supabase/.branches/
 # Large data directories (stored in Google Drive / Storage, not git)
 pmu_data/
 pmu_data_all.zip
+pmu_data_gap.zip
 
 # Scraper logs
 scraper_async.log
