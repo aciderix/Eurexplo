@@ -107,7 +107,7 @@ LGBM_PARAMS = {
 
 def _parse_musique(s: str | None, n: int = 5) -> dict:
     """Extrait les n derniers résultats de la musique (leftmost = most recent)."""
-    if not s:
+    if not s or not isinstance(s, str):
         return {"mus_wins": 0, "mus_places": 0, "mus_dnf": 0, "mus_avg_pos": np.nan}
     tokens = re.findall(r"[0-9D]", s)[:n]
     wins = sum(1 for t in tokens if t == "1")

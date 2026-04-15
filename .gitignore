@@ -18,8 +18,8 @@ pmu_data.csv
 # Large derived parquet files (regeneratable from pmu_daily_json/ or pmu_data/)
 pmu_dataset.parquet
 pmu_features.parquet
-pmu_dataset_v2.parquet
 pmu_course_raw_v2.parquet
+pmu_dataset_v2.parquet
 build_v2.log
 
 # Secrets — NEVER commit

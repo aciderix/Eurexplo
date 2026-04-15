@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude *)",
+      "Bash(python -c \"import pyarrow; print\\('pyarrow', pyarrow.__version__\\)\")",
+      "Bash(python -c \"import pandas; print\\('pandas', pandas.__version__\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import lightgbm; import sklearn; print\\('lgb', lightgbm.__version__\\); print\\('sklearn', sklearn.__version__\\)\")",
+      "Bash(pip install *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}
