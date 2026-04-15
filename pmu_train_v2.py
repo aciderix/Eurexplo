@@ -294,6 +294,10 @@ def run_fold(train_df: pd.DataFrame, val_df: pd.DataFrame, fold_name: str) -> di
 
     feat_cols = feature_columns(train_fe)
     feat_cols = [c for c in feat_cols if c in val_fe.columns]
+    # Drop any remaining non-numeric columns (strings from enriched parquet)
+    feat_cols = [c for c in feat_cols
+                 if train_fe[c].dtype.kind in ("i", "u", "f", "b")
+                 or str(train_fe[c].dtype) in ("category", "bool")]
 
     X_tr = train_fe[feat_cols].values.astype(np.float32)
     y_tr = train_fe["won"].fillna(0).astype(int).values
