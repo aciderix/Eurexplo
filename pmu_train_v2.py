@@ -294,10 +294,21 @@ def run_fold(train_df: pd.DataFrame, val_df: pd.DataFrame, fold_name: str) -> di
 
     feat_cols = feature_columns(train_fe)
     feat_cols = [c for c in feat_cols if c in val_fe.columns]
-    # Drop any remaining non-numeric columns (strings from enriched parquet)
-    feat_cols = [c for c in feat_cols
-                 if train_fe[c].dtype.kind in ("i", "u", "f", "b")
-                 or str(train_fe[c].dtype) in ("category", "bool")]
+
+    # Cast object columns that contain bools/numbers; drop true strings
+    kept = []
+    for c in feat_cols:
+        if train_fe[c].dtype == object:
+            converted = pd.to_numeric(train_fe[c].map({True: 1, False: 0, None: None}),
+                                      errors="coerce")
+            if converted.notna().mean() > 0.5:
+                train_fe[c] = converted
+                val_fe[c]   = pd.to_numeric(val_fe[c].map({True: 1, False: 0, None: None}),
+                                            errors="coerce")
+                kept.append(c)
+        else:
+            kept.append(c)
+    feat_cols = kept
 
     X_tr = train_fe[feat_cols].values.astype(np.float32)
     y_tr = train_fe["won"].fillna(0).astype(int).values
