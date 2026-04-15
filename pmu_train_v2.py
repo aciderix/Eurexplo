@@ -324,22 +324,23 @@ def run_fold(train_df: pd.DataFrame, val_df: pd.DataFrame, fold_name: str) -> di
             pass  # string column in train or val, drop it
     feat_cols = safe_cols
 
-    X_tr = train_fe[feat_cols].values.astype(np.float32)
+    # Passer un DataFrame pour que LightGBM sauvegarde les noms de colonnes
+    df_tr = train_fe[feat_cols].astype(np.float32)
+    df_va = val_fe[feat_cols].astype(np.float32)
     y_tr = train_fe["won"].fillna(0).astype(int).values
-    X_va = val_fe[feat_cols].values.astype(np.float32)
     y_va = val_fe["won"].fillna(0).astype(int).values
 
     model = lgb.LGBMClassifier(**LGBM_PARAMS)
     model.fit(
-        X_tr, y_tr,
-        eval_set=[(X_va, y_va)],
+        df_tr, y_tr,
+        eval_set=[(df_va, y_va)],
         callbacks=[
             lgb.early_stopping(50, verbose=False),
             lgb.log_evaluation(period=-1),
         ],
     )
 
-    preds = model.predict_proba(X_va)[:, 1]
+    preds = model.predict_proba(df_va)[:, 1]
     auc   = roc_auc_score(y_va, preds)
     roi_top1 = simulate_roi(val_df.assign(pred_=preds).merge(
         pd.DataFrame({"idx": val_df.index, "pred": preds}).set_index("idx"),
@@ -377,9 +378,10 @@ def run_fold(train_df: pd.DataFrame, val_df: pd.DataFrame, fold_name: str) -> di
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--fast",      action="store_true", help="1 fold seulement (2023→2024)")
-    ap.add_argument("--from-year", type=int, default=2018, help="Premier fold val (défaut 2018)")
-    ap.add_argument("--parquet",   default=str(PARQUET))
+    ap.add_argument("--fast",       action="store_true", help="1 fold seulement (2023→2024)")
+    ap.add_argument("--final-only", action="store_true", help="Seulement le modele final, sans CV")
+    ap.add_argument("--from-year",  type=int, default=2018, help="Premier fold val (défaut 2018)")
+    ap.add_argument("--parquet",    default=str(PARQUET))
     args = ap.parse_args()
 
     print("Chargement du parquet…")
@@ -406,6 +408,8 @@ def main() -> int:
     fold_years = range(args.from_year, max_val_year)
     if args.fast:
         fold_years = [max_val_year - 1]
+    if args.final_only:
+        fold_years = []
 
     print(f"\nWalk-forward CV  |  folds val: {list(fold_years)}\n")
     print("-" * 80)
@@ -434,9 +438,14 @@ def main() -> int:
     final = run_fold(df[train_mask], df[val_mask], f"FINAL val={final_val_year}")
     fold_results.append(final)
 
-    # Sauvegarder modèle
+    # Sauvegarder modèle + noms de features (indispensable pour l'inférence live)
     final["model"].booster_.save_model(str(OUT_MODEL))
-    print(f"\nModèle sauvegardé : {OUT_MODEL}")
+    feat_names_path = OUT_MODEL.with_suffix(".features.json")
+    feat_names_path.write_text(
+        json.dumps(final["feat_cols"], indent=2), encoding="utf-8"
+    )
+    print(f"\nModèle sauvegardé   : {OUT_MODEL}")
+    print(f"Features sauvegardées: {feat_names_path}")
 
     # Rapport JSON
     report = {
