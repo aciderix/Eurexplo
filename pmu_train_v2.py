@@ -215,12 +215,21 @@ def add_target_encodings(df: pd.DataFrame, global_mean: float | None = None) -> 
 
 def feature_columns(df: pd.DataFrame) -> list[str]:
     drop = {
-        "race_id", "file_date", "num_pmu", "won", "finish_position",
+        # ids
+        "race_id", "file_date", "num_pmu",
+        # targets / post-course (JAMAIS en feature)
+        "won", "finish_position", "placed",
+        "temps_obtenu", "reduction_kilometrique", "distance_cheval_precedent",
+        "arrivee_definitive", "statut_course",
+        # raw stats cumulées (remplacées par win_rate etc. calculés)
         "heure_depart_ts", "musique", "nombre_courses", "nombre_victoires",
         "nombre_places", "nombre_places_second", "nombre_places_troisieme",
         "gains_carriere", "gains_annee_en_cours", "gains_annee_precedente",
-        "gains_victoires", "gains_place", "drd_rapport", "drr_rapport",
+        "gains_victoires", "gains_place",
+        # raw odds (remplacés par log_drd, prob_drd etc.)
+        "drd_rapport", "drr_rapport",
         "drd_nombre_indicateur_tendance", "grand_prix_national_trot", "pari_special",
+        # haute cardinalité texte (remplacés par target-encoding)
         "nom_pere", "nom_mere", "entraineur", "driver",
         "montant_total_offert",
     } | {c for c in df.columns if c.startswith("year") and c != "year"}
