@@ -427,16 +427,17 @@ def _flatten_file(path_str: str) -> tuple[list[dict], list[dict], int]:
 # ── Parquet writer (streaming) ───────────────────────────────────────────────
 
 class StreamWriter:
-    def __init__(self, path: Path, schema: pa.Schema, compression: str = "zstd"):
+    def __init__(self, path: Path, schema: pa.Schema, compression: str = "zstd", batch_size: int = 20_000):
         self.path = path
         self.schema = schema
         self._writer = pq.ParquetWriter(str(path), schema, compression=compression)
         self._buffer: list[dict] = []
         self._written = 0
+        self._batch_size = batch_size
 
     def add(self, rows: Iterable[dict]) -> None:
         self._buffer.extend(rows)
-        if len(self._buffer) >= 50_000:
+        if len(self._buffer) >= self._batch_size:
             self._flush()
 
     def _flush(self) -> None:
@@ -492,8 +493,8 @@ def main() -> int:
     print(f"Out courses    : {args.out_courses}")
     print("-" * 60)
 
-    part_writer = StreamWriter(Path(args.out_participants), PARTICIPANT_SCHEMA)
-    course_writer = StreamWriter(Path(args.out_courses), COURSE_SCHEMA)
+    part_writer = StreamWriter(Path(args.out_participants), PARTICIPANT_SCHEMA, batch_size=20_000)
+    course_writer = StreamWriter(Path(args.out_courses), COURSE_SCHEMA, batch_size=500)
 
     t0 = time.time()
     n_done = 0
