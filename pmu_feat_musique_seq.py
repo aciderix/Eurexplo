@@ -46,10 +46,12 @@ OUT_PATH = Path("pmu_feat_musique_seq_v3.parquet")
 
 # ── Parsing musique ──────────────────────────────────────────────────────────
 
+# Format PMU : séquence de [place+discipline], incidents (D/T/R/A), marqueur année (YY)
 # ex: "1a3a7a(22)2aDa5a" ou "1a 3a 7a (22) 2a Da 5a"
-# tokens possibles : [0-9]+|D|T|R|A|Dérobé… suivi de discipline a/m/h/s/c/p
-TOKEN_RE = re.compile(r"(?:\(\d{2,4}\))|(\d+|D|T|R|A|Dé)\s*([amhscp]?)", re.IGNORECASE)
-YEAR_RE  = re.compile(r"\((\d{2,4})\)")
+# - place  : chiffres
+# - incident : D (distancé), T (tombé), R (retiré), A (arrêté)
+# - discipline suffix : a (attelé), m (monté), h (haie), s (steeple), c (cross), p (plat)
+# - (YY) ou (YYYY) : marqueur de saison antérieure
 
 DNF_TOKENS = {"D", "T", "R", "A"}
 

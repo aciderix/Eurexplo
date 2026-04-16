@@ -127,9 +127,7 @@ def run(limit: int | None = None) -> None:
                         continue
                     ra, rb = ranks[i], ranks[j]
                     if ra == rb:
-                        # on ne compte pas l'ex-æquo strict
-                        stat = h2h[_key(a, b)]
-                        stat[2] += 0
+                        # ex-æquo strict : on ne touche PAS le dict (pas d'entrée fantôme)
                         continue
                     stat = h2h[_key(a, b)]
                     stat[2] += 1

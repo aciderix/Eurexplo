@@ -44,6 +44,7 @@ import pandas as pd
 import pyarrow.parquet as pq
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import KFold, cross_val_predict
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 
@@ -204,7 +205,10 @@ def train_stack_fold(tr_df, va_df, feat_cols: list[str], params: dict, use_mlp: 
 
 
 def build_meta_features(va_df: pd.DataFrame, base_preds: dict) -> pd.DataFrame:
-    df = va_df[["race_id", "num_pmu", "won", "drd_rapport"]].copy()
+    keep = ["race_id", "num_pmu", "won", "drd_rapport"]
+    if "file_date" in va_df.columns:
+        keep.insert(2, "file_date")
+    df = va_df[keep].copy()
     for name, p in base_preds.items():
         df[f"p_{name}"] = p
         df[f"rank_{name}"] = df.groupby("race_id")[f"p_{name}"].rank(ascending=False)
@@ -283,14 +287,20 @@ def main() -> int:
     meta_X = oof[meta_cols].fillna(0).values
     meta_y = oof["won"].astype(int).values
 
-    meta = LogisticRegression(
+    # ── Meta = LogReg. Cross-fit pour des predictions OOF HONNÊTES
+    # (sinon p_stack est in-sample → calibration/conformal biaisés).
+    meta_base = LogisticRegression(
         C=1.0, solver="lbfgs", max_iter=500, class_weight="balanced", n_jobs=-1,
     )
-    meta.fit(meta_X, meta_y)
-    oof["p_stack"] = meta.predict_proba(meta_X)[:, 1]
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    oof["p_stack"] = cross_val_predict(
+        meta_base, meta_X, meta_y, cv=kf, method="predict_proba", n_jobs=-1,
+    )[:, 1]
+    # Modèle final (utilisé en inférence live) entraîné sur TOUT le stack
+    meta = meta_base.fit(meta_X, meta_y)
 
     auc_stack = roc_auc_score(meta_y, oof["p_stack"])
-    print(f"\nStack OOF AUC: {auc_stack:.4f}")
+    print(f"\nStack OOF (cross-fit) AUC: {auc_stack:.4f}")
     for c in [c for c in oof.columns if c.startswith("p_") and c != "p_stack"]:
         try:
             print(f"  vs {c}: AUC={roc_auc_score(meta_y, oof[c]):.4f}")

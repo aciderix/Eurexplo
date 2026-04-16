@@ -52,11 +52,9 @@ DB_PATH  = Path("pmu_optuna_study.db")
 OUT_BEST = Path("pmu_best_params_v3.json")
 
 # ── 3 folds rolling pour chaque trial (pas 12, sinon trop long) ──
-EVAL_MONTHS = [
-    ("2025-01", "2024-01"),  # val = 2025-01, train ends 2024-12 → cutoff (exclusive) 2025-01
-    ("2025-07", "2024-07"),
-    ("2026-01", "2025-01"),
-]
+# Pour chaque val_ym, train = TOUTES les lignes avec year_month < val_ym
+# (donc depuis 2014). On ne fait pas de cutoff sliding — on exploite max data.
+EVAL_MONTHS = ["2025-01", "2025-07", "2026-01"]
 
 
 EXCLUDE_COLS = {
@@ -129,7 +127,7 @@ def _train_eval(trial, df: pd.DataFrame, feat_cols: list[str]) -> float:
     reward_pow = trial.suggest_float("reward_pow", 0.0, 1.5)
 
     scores = []
-    for i, (val_ym, _cut) in enumerate(EVAL_MONTHS):
+    for i, val_ym in enumerate(EVAL_MONTHS):
         tr_df = df[df["year_month"] < val_ym].sort_values(["file_date", "race_id", "num_pmu"])
         va_df = df[df["year_month"] == val_ym].sort_values(["file_date", "race_id", "num_pmu"])
         if tr_df.empty or va_df.empty:

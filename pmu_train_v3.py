@@ -195,10 +195,12 @@ def train_fold(X_tr, y_tr, w_tr, g_tr, X_va, y_va, g_va,
 
 # ── Metrics ──────────────────────────────────────────────────────────────────
 
-def roi_top1(df_val: pd.DataFrame, score: np.ndarray, value_filter: bool=False) -> dict:
+def roi_top1(df_val: pd.DataFrame, score: np.ndarray, value_filter: bool=False,
+             min_edge: float = 0.0) -> dict:
     df = df_val.copy()
     df["score"] = score
     df["cote"] = df["drd_rapport"].fillna(0.0)
+    has_p = "p_bin" in df.columns
     bets = []
     for _, grp in df.groupby("race_id"):
         g = grp[grp["cote"] > 0]
@@ -206,13 +208,15 @@ def roi_top1(df_val: pd.DataFrame, score: np.ndarray, value_filter: bool=False) 
             continue
         best = g.loc[g["score"].idxmax()]
         if value_filter:
-            # probabilité implicite via score: on a besoin d'une p — utilise p_bin ici
-            # si fourni dans df (col p_bin), sinon approxime par rank_norm
-            p = best.get("p_bin", np.nan)
-            if pd.notna(p):
-                edge = p - 1.0 / best["cote"]
-                if edge <= 0:
-                    continue
+            if not has_p:
+                # pas de p_bin → on ne peut pas filtrer sur l'edge ; on skip la course
+                continue
+            p = best["p_bin"]
+            if pd.isna(p):
+                continue
+            edge = float(p) - 1.0 / float(best["cote"])
+            if edge <= min_edge:
+                continue
         won = bool(best["won"])
         bets.append({"cote": float(best["cote"]), "won": won,
                      "pnl": (best["cote"] - 1.0) if won else -1.0})

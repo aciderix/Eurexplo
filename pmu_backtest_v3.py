@@ -171,10 +171,14 @@ def main() -> int:
     args = ap.parse_args()
 
     oof = pq.read_table(args.oof).to_pandas()
-    oof["ym"] = oof["race_id"].astype(str).str[:7] if "year_month" not in oof.columns else oof["year_month"]
-    # Fallback: from file_date if present
-    if oof["ym"].isna().all() or "file_date" in oof.columns:
-        oof["ym"] = oof.get("file_date", oof["race_id"]).astype(str).str[:7]
+    # Déterminer year_month : priorité file_date > year_month existant > race_id
+    if "file_date" in oof.columns:
+        oof["ym"] = oof["file_date"].astype(str).str[:7]
+    elif "year_month" in oof.columns:
+        oof["ym"] = oof["year_month"]
+    else:
+        # race_id format : YYYY-MM-DD_R_C → [:7] = YYYY-MM
+        oof["ym"] = oof["race_id"].astype(str).str[:7]
 
     # Calibration si dispo
     if Path(args.cal).exists():

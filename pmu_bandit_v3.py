@@ -126,6 +126,11 @@ def _prep_context(df: pd.DataFrame, oof: pd.DataFrame | None, feat_cols: list[st
 def simulate(df: pd.DataFrame, oof: pd.DataFrame | None, feat_cols: list[str],
              train_end: str, eval_start: str, eval_end: str | None,
              seed: int = 42) -> dict:
+    # Tri chronologique AVANT tout — sans quoi le bandit apprend dans le désordre.
+    df = df.sort_values(["file_date", "race_id", "num_pmu"], kind="stable").reset_index(drop=True)
+    if oof is not None:
+        oof = oof.copy()  # pas trié car merge par clés
+
     Xz, cols_used = _prep_context(df, oof, feat_cols)
     dim = Xz.shape[1]
     print(f"Bandit dim = {dim} (cols: {cols_used[:5]}... + _bias)")
