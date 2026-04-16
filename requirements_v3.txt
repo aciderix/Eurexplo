@@ -13,10 +13,10 @@ gensim>=4.3           # Word2Vec pour entity2vec
 
 # Optimisation
 optuna>=3.5
-optuna-integration>=3.5
+# optuna-integration>=3.5   # optional, not imported in v3
 
-# Deep learning (facultatif, pour pmu_feat_musique_seq.py et MLP du stack)
-torch>=2.1
+# Deep learning (facultatif — décommente si tu veux le Transformer sur musique)
+# torch>=2.1
 
 # Plotting / rapport
 matplotlib>=3.7
