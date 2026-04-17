@@ -36,6 +36,7 @@ import subprocess
 import sys
 import threading
 import time
+import zipfile
 from pathlib import Path
 
 REPO_URL = os.environ.get(
@@ -71,12 +72,19 @@ def install_requirements() -> None:
     _sh([sys.executable, "-m", "pip", "install", "-q", "gdown>=5.2"])
 
 
+def _unzip_into(zip_path: Path, target: Path) -> None:
+    target.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(zip_path) as zf:
+        zf.extractall(target)
+    print(f"[kernel] extracted {zip_path.name} → {target}")
+
+
 def restore_from_input() -> None:
     """Copy checkpoints/artifacts from any attached input dataset into the
     repo's working directory. Attach a dataset to your kernel whose files are:
-      - pmu_dataset_v2.parquet / pmu_course_raw_v2.parquet
-      - state/...    (heartbeat, stages.json, train_v3_ckpt/*, stack_v3_ckpt/*,
-                      logs/*)
+      - pmu_dataset_v2.parquet / pmu_course_raw_v2.parquet / pmu_feat_*.parquet
+      - state.zip (or state/... if unzipped) with heartbeat, stages.json,
+        train_v3_ckpt/*, stack_v3_ckpt/*, logs/*
       - any pmu_*.parquet / pmu_*.pkl / pmu_*.json / *.lgb artifacts that
         previous sessions produced.
     """
@@ -86,8 +94,15 @@ def restore_from_input() -> None:
         if not entry.is_dir():
             continue
         print(f"[kernel] scanning input dataset {entry.name}")
+        # Kaggle CLI with --dir-mode zip uploads each subdir as a single zip;
+        # Kaggle does NOT auto-extract on attach, so we do it here.
+        for z in entry.glob("*.zip"):
+            if z.stem == "state":
+                _unzip_into(z, STATE_DIR)
+            else:
+                _unzip_into(z, REPO_DIR / z.stem)
         for p in entry.rglob("*"):
-            if not p.is_file():
+            if not p.is_file() or p.suffix == ".zip":
                 continue
             rel = p.relative_to(entry)
             # state/* lands under STATE_DIR; everything else under REPO_DIR
@@ -99,8 +114,6 @@ def restore_from_input() -> None:
                 continue
             dest.parent.mkdir(parents=True, exist_ok=True)
             try:
-                # Hard-link when possible (Kaggle input is read-only, but a
-                # link is fine); fall back to copy otherwise.
                 os.link(p, dest)
             except OSError:
                 shutil.copy2(p, dest)
@@ -139,10 +152,22 @@ def snapshot_outputs() -> None:
                 out = dest / "state" / rel
                 out.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(p, out)
-    for pattern in ("pmu_*v3*", "pmu_model_v3*", "pmu_*_v3.*"):
-        for p in REPO_DIR.glob(pattern):
-            if p.is_file():
-                shutil.copy2(p, dest / p.name)
+    # Parquets / models / configs don't mutate once written — hard-link to
+    # avoid re-copying multi-GB files on every periodic snapshot. Includes
+    # both v2 source parquets (so the next session skips the Drive download)
+    # and v3 derived artifacts.
+    for pat in ("pmu_*.parquet", "pmu_*.lgb", "pmu_*.json", "pmu_*.pkl",
+                "pmu_*.csv"):
+        for p in REPO_DIR.glob(pat):
+            if not p.is_file():
+                continue
+            out = dest / p.name
+            if out.exists():
+                continue
+            try:
+                os.link(p, out)
+            except OSError:
+                shutil.copy2(p, out)
     print(f"[kernel] wrote outputs snapshot to {dest}")
 
 
