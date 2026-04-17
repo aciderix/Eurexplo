@@ -31,8 +31,11 @@ from __future__ import annotations
 
 import os
 import shutil
+import signal
 import subprocess
 import sys
+import threading
+import time
 from pathlib import Path
 
 REPO_URL = os.environ.get(
@@ -169,13 +172,59 @@ def push_state_dataset() -> None:
              "-p", str(outputs), "--dir-mode", "zip"])
 
 
+_STOP_SNAPSHOT = threading.Event()
+
+
+def _periodic_snapshot(interval_s: int = 300) -> None:
+    """Background loop that re-runs snapshot_outputs every interval_s so that
+    /kaggle/working/outputs/ always reflects the most recent state on disk.
+
+    Kaggle preserves /kaggle/working/ as the notebook version's artifacts even
+    if the kernel is hard-killed (9 h wall-clock, pre-empt, crash), so the
+    incremental snapshot is our last line of defence against lost work.
+    """
+    while not _STOP_SNAPSHOT.wait(interval_s):
+        try:
+            snapshot_outputs()
+        except Exception as exc:  # noqa: BLE001
+            print(f"[kernel] periodic snapshot failed: {exc}", flush=True)
+
+
+def _install_sigterm_handler() -> None:
+    def _handler(signum, frame):  # noqa: ARG001
+        print(f"[kernel] caught signal {signum} — flushing snapshot + state dataset",
+              flush=True)
+        _STOP_SNAPSHOT.set()
+        try:
+            snapshot_outputs()
+        finally:
+            try:
+                push_state_dataset()
+            except Exception as exc:  # noqa: BLE001
+                print(f"[kernel] state-dataset push in signal handler failed: {exc}",
+                      flush=True)
+        sys.exit(143 if signum == signal.SIGTERM else 130)
+
+    signal.signal(signal.SIGTERM, _handler)
+    signal.signal(signal.SIGINT, _handler)
+
+
 def main() -> int:
     clone_repo()
     install_requirements()
     restore_from_input()
-    rc = run_pipeline()
-    snapshot_outputs()
-    push_state_dataset()
+    _install_sigterm_handler()
+    t = threading.Thread(target=_periodic_snapshot, args=(300,), daemon=True)
+    t.start()
+    try:
+        rc = run_pipeline()
+    finally:
+        _STOP_SNAPSHOT.set()
+        snapshot_outputs()
+        try:
+            push_state_dataset()
+        except Exception as exc:  # noqa: BLE001
+            print(f"[kernel] final state-dataset push failed: {exc}", flush=True)
     return rc
 
 
