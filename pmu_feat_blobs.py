@@ -242,14 +242,17 @@ def run(limit: int | None = None, include_masse: bool = True) -> None:
                                   "nom", "nb_partants_reels"]).to_pandas()
     print(f"  base: {len(base):,} rows")
 
-    print(f"Loading {RAW_PATH}...")
-    raw = pq.read_table(RAW_PATH).to_pandas()
-    print(f"  raw : {len(raw):,} rows")
+    print(f"Loading {RAW_PATH} (streamed)...")
+    raw_cols = ["race_id", "file_date",
+                "rapports_definitifs_json", "pronostics_json",
+                "pronostics_detailles_json", "masse_enjeu_json",
+                "performances_detaillees_json"]
+    pf = pq.ParquetFile(RAW_PATH)
+    n_races = pf.metadata.num_rows
+    print(f"  raw : {n_races:,} rows")
 
     if limit:
-        race_ids = set(raw["race_id"].iloc[:limit])
-        raw = raw[raw["race_id"].isin(race_ids)].copy()
-        base = base[base["race_id"].isin(race_ids)].copy()
+        n_races = min(n_races, limit)
 
     # ── Pré-indexation base par race_id (évite O(N*M) quadratique) ──
     t_idx = time.time()
@@ -261,68 +264,78 @@ def run(limit: int | None = None, include_masse: bool = True) -> None:
     # ── Extract per-race blob features ──
     t1 = time.time()
     feats: list[dict] = []
-    n_races = len(raw)
-    for i, row in enumerate(raw.itertuples(index=False)):
-        if i % 20000 == 0 and i > 0:
-            done_frac = i / n_races
-            eta = (time.time() - t1) / done_frac - (time.time() - t1)
-            print(f"  {i:>7,}/{n_races:,}  ({eta:.0f}s restant)")
+    i = 0
+    stop = False
+    for batch in pf.iter_batches(batch_size=2000, columns=raw_cols):
+        if stop:
+            break
+        raw_batch = batch.to_pandas()
+        for row in raw_batch.itertuples(index=False):
+            if limit and i >= limit:
+                stop = True
+                break
+            if i % 20000 == 0 and i > 0:
+                done_frac = i / n_races
+                eta = (time.time() - t1) / done_frac - (time.time() - t1)
+                print(f"  {i:>7,}/{n_races:,}  ({eta:.0f}s restant)")
+            i += 1
 
-        rap   = parse_rapports_definitifs(row.rapports_definitifs_json)
-        pron  = parse_pronostics(row.pronostics_json)
-        if not pron:
-            pron = parse_pronostics(row.pronostics_detailles_json)
-        mass  = parse_masse_enjeu(row.masse_enjeu_json) if include_masse else {}
-        perfs = parse_performances_by_horse(row.performances_detaillees_json,
-                                            current_date=row.file_date)
+            rap   = parse_rapports_definitifs(row.rapports_definitifs_json)
+            pron  = parse_pronostics(row.pronostics_json)
+            if not pron:
+                pron = parse_pronostics(row.pronostics_detailles_json)
+            mass  = parse_masse_enjeu(row.masse_enjeu_json) if include_masse else {}
+            perfs = parse_performances_by_horse(row.performances_detaillees_json,
+                                                current_date=row.file_date)
 
-        subset = base_by_race.get(row.race_id)
-        if subset is None or subset.empty:
-            continue
+            subset = base_by_race.get(row.race_id)
+            if subset is None or subset.empty:
+                continue
 
-        for _, p in subset.iterrows():
-            num = int(p["num_pmu"])
-            nom = p["nom"]
-            d = {"race_id": row.race_id, "num_pmu": num}
+            for _, p in subset.iterrows():
+                num = int(p["num_pmu"])
+                nom = p["nom"]
+                d = {"race_id": row.race_id, "num_pmu": num}
 
-            # Cote finale / movement — POST-COURSE (exclu du train)
-            r = rap.get(num, {})
-            sg_final = r.get("rap_sg_final")
-            sp_final = r.get("rap_sp_final")
-            drd = p.get("drd_rapport")
-            drr = p.get("drr_rapport")
-            d["blob_rap_sg_final"] = sg_final if sg_final else np.nan
-            d["blob_rap_sp_final"] = sp_final if sp_final else np.nan
-            d["blob_movement_drd_to_final"] = (
-                (sg_final - drd) / drd if sg_final and drd and drd > 0 else np.nan
-            )
-            d["blob_movement_drr_to_final"] = (
-                (sg_final - drr) / drr if sg_final and drr and drr > 0 else np.nan
-            )
+                # Cote finale / movement — POST-COURSE (exclu du train)
+                r = rap.get(num, {})
+                sg_final = r.get("rap_sg_final")
+                sp_final = r.get("rap_sp_final")
+                drd = p.get("drd_rapport")
+                drr = p.get("drr_rapport")
+                d["blob_rap_sg_final"] = sg_final if sg_final else np.nan
+                d["blob_rap_sp_final"] = sp_final if sp_final else np.nan
+                d["blob_movement_drd_to_final"] = (
+                    (sg_final - drd) / drd if sg_final and drd and drd > 0 else np.nan
+                )
+                d["blob_movement_drr_to_final"] = (
+                    (sg_final - drr) / drr if sg_final and drr and drr > 0 else np.nan
+                )
 
-            # Masse enjeu (demande publique) — opt-in
-            if include_masse:
-                d["blob_masse_share"] = mass.get(num, np.nan)
+                # Masse enjeu (demande publique) — opt-in
+                if include_masse:
+                    d["blob_masse_share"] = mass.get(num, np.nan)
 
-            # Pronostics experts
-            pr = pron.get(num, {})
-            d["blob_prono_n_tips"]    = pr.get("prono_n_tips", 0)
-            d["blob_prono_rank_min"]  = pr.get("prono_rank_min", np.nan)
-            d["blob_prono_rank_mean"] = pr.get("prono_rank_mean", np.nan)
-            d["blob_prono_top1_cnt"]  = pr.get("prono_top1_cnt", 0)
-            d["blob_prono_top3_cnt"]  = pr.get("prono_top3_cnt", 0)
+                # Pronostics experts
+                pr = pron.get(num, {})
+                d["blob_prono_n_tips"]    = pr.get("prono_n_tips", 0)
+                d["blob_prono_rank_min"]  = pr.get("prono_rank_min", np.nan)
+                d["blob_prono_rank_mean"] = pr.get("prono_rank_mean", np.nan)
+                d["blob_prono_top1_cnt"]  = pr.get("prono_top1_cnt", 0)
+                d["blob_prono_top3_cnt"]  = pr.get("prono_top3_cnt", 0)
 
-            # Performances historiques du cheval (pré-course)
-            pf = perfs.get(nom, {})
-            d["blob_perf_n_past"]          = pf.get("blob_perf_n_past", 0)
-            d["blob_perf_place_mean"]      = pf.get("blob_perf_place_mean", np.nan)
-            d["blob_perf_place_last3"]     = pf.get("blob_perf_place_last3", np.nan)
-            d["blob_perf_reduction_best"]  = pf.get("blob_perf_reduction_best", np.nan)
-            d["blob_perf_reduction_last3"] = pf.get("blob_perf_reduction_last3", np.nan)
-            d["blob_perf_allocation_mean"] = pf.get("blob_perf_allocation_mean", np.nan)
-            d["blob_perf_temps_mean"]      = pf.get("blob_perf_temps_mean", np.nan)
+                # Performances historiques du cheval (pré-course)
+                hp = perfs.get(nom, {})
+                d["blob_perf_n_past"]          = hp.get("blob_perf_n_past", 0)
+                d["blob_perf_place_mean"]      = hp.get("blob_perf_place_mean", np.nan)
+                d["blob_perf_place_last3"]     = hp.get("blob_perf_place_last3", np.nan)
+                d["blob_perf_reduction_best"]  = hp.get("blob_perf_reduction_best", np.nan)
+                d["blob_perf_reduction_last3"] = hp.get("blob_perf_reduction_last3", np.nan)
+                d["blob_perf_allocation_mean"] = hp.get("blob_perf_allocation_mean", np.nan)
+                d["blob_perf_temps_mean"]      = hp.get("blob_perf_temps_mean", np.nan)
 
-            feats.append(d)
+                feats.append(d)
+        del raw_batch
 
     print(f"Per-race blob extraction done in {time.time()-t1:.0f}s")
 
