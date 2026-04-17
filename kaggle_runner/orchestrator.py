@@ -70,11 +70,14 @@ def default_stages(repo: Path, state: Path, skip_optuna: bool, skip_stack: bool,
 
     # ── 3 optuna (SQLite-resumable via its own --resume) ──
     if not skip_optuna:
+        optuna_cmd = ["python", "pmu_optuna_v3.py",
+                      "--n-trials", os.environ.get("PMU_OPTUNA_TRIALS", "200"),
+                      "--study", "pmu_v3_main", "--resume"]
+        sample_frac = os.environ.get("PMU_OPTUNA_SAMPLE_FRAC", "")
+        if sample_frac:
+            optuna_cmd += ["--sample-frac", sample_frac]
         stages.append(
-            Stage("optuna", ["pmu_best_params_v3.json"],
-                  ["python", "pmu_optuna_v3.py",
-                   "--n-trials", os.environ.get("PMU_OPTUNA_TRIALS", "200"),
-                   "--study", "pmu_v3_main", "--resume"])
+            Stage("optuna", ["pmu_best_params_v3.json"], optuna_cmd)
         )
 
     # ── 4 train (resumable wrapper) ──
