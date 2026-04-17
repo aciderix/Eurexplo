@@ -184,15 +184,20 @@ def run_stage(stage: Stage, repo: Path, state: Path, budget_deadline: float) -> 
 
 
 def download_data_if_missing(repo: Path) -> None:
-    need = any(not (repo / f).exists() for f in
-               ["pmu_dataset_v2.parquet", "pmu_course_raw_v2.parquet"])
-    if not need:
+    needed = [
+        "pmu_dataset_v2.parquet", "pmu_course_raw_v2.parquet",
+        "pmu_feat_elo.parquet", "pmu_feat_market.parquet",
+        "pmu_feat_musique.parquet", "pmu_feat_rolling.parquet",
+        "pmu_feat_target_enc.parquet",
+    ]
+    missing = [f for f in needed if not (repo / f).exists()]
+    if not missing:
         print("[orch] datasets present, skipping download")
         return
-    print("[orch] fetching base datasets from Google Drive")
+    print(f"[orch] fetching {len(missing)} parquets from Google Drive: {missing}")
     subprocess.check_call([
         sys.executable, "-m", "kaggle_runner.download_data",
-        "--dest", str(repo), "--required-only"
+        "--dest", str(repo),
     ], cwd=str(repo))
 
 
