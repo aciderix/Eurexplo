@@ -91,12 +91,18 @@ def default_stages(repo: Path, state: Path, skip_optuna: bool, skip_stack: bool,
 
     # ── 5 stack (resumable wrapper) ──
     if not skip_stack:
+        stack_cmd = ["python", "-m", "kaggle_runner.stack_v3_resumable",
+                     "--checkpoint-dir", str(state / "stack_v3_ckpt"),
+                     *hb()]
+        from_ym = os.environ.get("PMU_STACK_FROM_YM", "")
+        if from_ym:
+            stack_cmd += ["--from-ym", from_ym]
+        if os.environ.get("PMU_STACK_NO_MLP", "0") == "1":
+            stack_cmd += ["--no-mlp"]
         stages.append(
             Stage("stack",
                   ["pmu_stack_v3.pkl", "pmu_oof_stack_v3.parquet"],
-                  ["python", "-m", "kaggle_runner.stack_v3_resumable",
-                   "--checkpoint-dir", str(state / "stack_v3_ckpt"),
-                   *hb()])
+                  stack_cmd)
         )
 
     # ── 6 calibration ──
