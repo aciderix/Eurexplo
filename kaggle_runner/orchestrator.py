@@ -99,6 +99,9 @@ def default_stages(repo: Path, state: Path, skip_optuna: bool, skip_stack: bool,
             stack_cmd += ["--from-ym", from_ym]
         if os.environ.get("PMU_STACK_NO_MLP", "0") == "1":
             stack_cmd += ["--no-mlp"]
+        stack_max_est = os.environ.get("PMU_STACK_MAX_EST", "")
+        if stack_max_est:
+            stack_cmd += ["--max-estimators", stack_max_est]
         stages.append(
             Stage("stack",
                   ["pmu_stack_v3.pkl", "pmu_oof_stack_v3.parquet"],

@@ -37,38 +37,48 @@ def _patch_gpu_params(p_json: dict) -> dict:
     return out
 
 
-def _patched_train_fold(tr_df, va_df, feat_cols, params, use_mlp, xgb_gpu, cb_gpu):
+def _patched_train_fold(tr_df, va_df, feat_cols, params, use_mlp, xgb_gpu, cb_gpu,
+                        max_estimators=None):
     """Call v3.train_stack_fold after swapping the XGB / CatBoost branches
-    to add GPU kwargs. We monkey-patch locally to avoid forking the whole fn."""
+    to add GPU kwargs and optional estimator cap. We monkey-patch locally to
+    avoid forking the whole fn."""
     import lightgbm as lgb  # noqa: F401
     from sklearn.neural_network import MLPClassifier  # noqa: F401
     from sklearn.preprocessing import StandardScaler  # noqa: F401
 
-    # Push GPU kwargs for xgb / catboost via constructor monkey-patching.
     orig_xgb = None
     orig_cb = None
-    if v3.HAS_XGB and xgb_gpu:
-        import xgboost as xgb_mod
 
-        class _GpuXGB(xgb_mod.XGBClassifier):
+    if v3.HAS_XGB:
+        import xgboost as xgb_mod
+        _max = max_estimators
+
+        class _PatchedXGB(xgb_mod.XGBClassifier):
             def __init__(self, **kw):
-                kw = gpu_env.apply_xgb(kw)
+                if _max:
+                    kw["n_estimators"] = min(kw.get("n_estimators", _max), _max)
+                if xgb_gpu:
+                    kw = gpu_env.apply_xgb(kw)
                 super().__init__(**kw)
 
         orig_xgb = xgb_mod.XGBClassifier
-        xgb_mod.XGBClassifier = _GpuXGB
+        xgb_mod.XGBClassifier = _PatchedXGB
         v3.xgb = xgb_mod
 
-    if v3.HAS_CAT and cb_gpu:
+    if v3.HAS_CAT:
         import catboost as cb_mod
+        _max = max_estimators
 
-        class _GpuCat(cb_mod.CatBoostClassifier):
+        class _PatchedCat(cb_mod.CatBoostClassifier):
             def __init__(self, **kw):
-                kw.update(gpu_env.catboost_kwargs())
+                if _max:
+                    kw["iterations"] = min(kw.get("iterations", _max), _max)
+                if cb_gpu:
+                    kw.update(gpu_env.catboost_kwargs())
                 super().__init__(**kw)
 
         orig_cb = cb_mod.CatBoostClassifier
-        cb_mod.CatBoostClassifier = _GpuCat
+        cb_mod.CatBoostClassifier = _PatchedCat
         v3.cb = cb_mod
 
     try:
@@ -105,6 +115,14 @@ def run(args) -> int:
                        "random_state": 42},
         }
     p_json = _patch_gpu_params(p_json)
+    if args.max_estimators:
+        for key in ("binary", "ranker"):
+            if key in p_json and isinstance(p_json[key], dict):
+                p_json[key]["n_estimators"] = min(
+                    p_json[key].get("n_estimators", args.max_estimators),
+                    args.max_estimators,
+                )
+        print(f"[stack] capped n_estimators to {args.max_estimators}")
     print(f"[stack] gpu_env: {gpu_env.summary()}")
 
     t0 = time.time()
@@ -150,6 +168,7 @@ def run(args) -> int:
             use_mlp=not args.no_mlp,
             xgb_gpu=gpu_env.use_gpu_xgb(),
             cb_gpu=gpu_env.use_gpu_cat(),
+            max_estimators=args.max_estimators,
         )
         meta_df = v3.build_meta_features(va_df, fold["base_preds"])
         meta_df.to_parquet(ckpt, compression="zstd", index=False)
@@ -210,6 +229,9 @@ def main() -> int:
     ap.add_argument("--out-oof",        default="pmu_oof_stack_v3.parquet")
     ap.add_argument("--out-pkl",        default="pmu_stack_v3.pkl")
     ap.add_argument("--heartbeat",      default=None)
+    ap.add_argument("--max-estimators", type=int, default=None,
+                    help="Cap n_estimators for all base learners (LGB/XGB/CatBoost). "
+                         "Stack needs diversity, not maximum precision.")
     args = ap.parse_args()
     return run(args)
 
