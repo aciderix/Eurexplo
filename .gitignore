@@ -44,3 +44,6 @@ pmu_data_gap.zip
 # Scraper logs
 scraper_async.log
 scraper_monitor.log
+
+# Model artifacts downloaded from Kaggle state dataset (regeneratable)
+outputs/
