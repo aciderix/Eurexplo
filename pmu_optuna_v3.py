@@ -183,6 +183,10 @@ def main() -> int:
     ap.add_argument("--study",    default="pmu_v3_main")
     ap.add_argument("--resume",   action="store_true")
     ap.add_argument("--features", default=str(FEATURES))
+    ap.add_argument("--sample-frac", type=float, default=None,
+                    help="Stratified-by-month subsample used ONLY by Optuna "
+                         "trials (1.0 = full). Best params are still saved so "
+                         "the final train stage can refit on 100 %% of data.")
     args = ap.parse_args()
 
     print(f"Loading {args.features}...")
@@ -194,13 +198,20 @@ def main() -> int:
     feat_cols = _select_features(df)
     print(f"  {len(df):,} rows, {len(feat_cols)} features  ({time.time()-t0:.1f}s)")
 
+    if args.sample_frac and 0.0 < args.sample_frac < 1.0:
+        n_before = len(df)
+        df = (df.groupby("year_month", group_keys=False)
+                .apply(lambda g: g.sample(frac=args.sample_frac, random_state=42)))
+        print(f"  subsampled {n_before:,} → {len(df):,} rows "
+              f"(frac={args.sample_frac}, stratified by year_month)")
+
     storage = f"sqlite:///{DB_PATH}"
     study = optuna.create_study(
         study_name=args.study,
         storage=storage,
         direction="maximize",
         sampler=TPESampler(seed=42, n_startup_trials=20),
-        pruner=MedianPruner(n_startup_trials=10, n_warmup_steps=1),
+        pruner=MedianPruner(n_startup_trials=10, n_warmup_steps=0),
         load_if_exists=args.resume,
     )
 

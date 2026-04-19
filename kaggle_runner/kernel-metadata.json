@@ -1,0 +1,14 @@
+{
+  "id": "REPLACE_WITH_YOUR_USERNAME/pmu-v3-pipeline",
+  "title": "PMU v3 pipeline",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}
