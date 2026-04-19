@@ -47,3 +47,14 @@ scraper_monitor.log
 
 # Model artifacts downloaded from Kaggle state dataset (regeneratable)
 outputs/
+pmu_model_v3.lgb
+pmu_model_v3.rk.lgb
+pmu_model_v3.features.json
+pmu_stack_v3.pkl
+pmu_calibrator_v3.pkl
+pmu_conformal_v3.json
+pmu_best_params_v3.json
+pmu_backtest_v3.json
+pmu_backtest_v3.csv
+pmu_bandit_v3.pkl
+pmu_bandit_report_v3.json
