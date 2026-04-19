@@ -179,12 +179,28 @@ def add_v3_features(df: pd.DataFrame, blobs: dict[str, dict],
             })
     if blob_rows:
         blob_df = pd.DataFrame(blob_rows)
+        # Align dtypes with df to avoid silent merge failure
+        blob_df["num_pmu"] = blob_df["num_pmu"].astype("int64")
+        df["num_pmu"] = df["num_pmu"].astype("int64")
+        blob_df["race_id"] = blob_df["race_id"].astype(str)
+        df["race_id"] = df["race_id"].astype(str)
         # Ranks per race
         g = blob_df.groupby("race_id")
         blob_df["blob_masse_share_rank"] = g["blob_masse_share"].rank(method="min", ascending=False)
         blob_df["blob_prono_top1_rank"]  = g["blob_prono_top1_cnt"].rank(method="min", ascending=False)
         blob_df["blob_perf_place_rank"]  = g["blob_perf_place_mean"].rank(method="min", ascending=True)
+        # Drop blob_* columns pre-filled as NaN by build_live_features (avoids _x/_y suffix)
+        to_drop = [c for c in df.columns if c.startswith("blob_") and c in blob_df.columns]
+        if to_drop:
+            df = df.drop(columns=to_drop)
         df = df.merge(blob_df, on=["race_id", "num_pmu"], how="left")
+        # Sanity: count how many rows still NaN on a core blob col
+        _n_total = len(df)
+        _n_nan = int(df["blob_masse_share"].isna().sum())
+        if _n_nan == _n_total:
+            print(f"[warn] blob merge: 100% NaN ({_n_nan}/{_n_total}) — check dtype/keys")
+        else:
+            print(f"[info] blob merge: {_n_total - _n_nan}/{_n_total} rows hydratées")
 
     # ── ELO ctx lookup ──
     for ent, key, pre_col, n_col in [
@@ -254,22 +270,38 @@ def predict_v3(df_fe: pd.DataFrame, feat_cols: list[str], bin_m, rk_m,
 
 # ── Récupération de l'ordre d'arrivée (post-hoc, pour compare seulement) ─────
 
-def fetch_results(date_str: str, race_ids: list[str]) -> dict[str, list[int]]:
+def fetch_results(date_str: str, race_ids: list[str],
+                  max_retries: int = 3, backoff: float = 2.0) -> dict[str, list[int]]:
+    """Fetch l'ordre d'arrivée. Retry + backoff sur 503 (rate limit PMU)."""
     session = requests.Session()
     out: dict[str, list[int]] = {}
     for rid in race_ids:
         try:
             _, R, C = rid.split("_")
             url = f"{BASE_URL}/{date_str}/{R}/{C}"
-            data = fetch(url, session)
         except Exception:
-            data = None
+            out[rid] = []
+            continue
+        data = None
+        for attempt in range(max_retries):
+            try:
+                r = session.get(url, timeout=15, headers=HEADERS)
+                if r.status_code == 200:
+                    data = r.json()
+                    break
+                if r.status_code == 503:
+                    time.sleep(backoff * (2 ** attempt))
+                    continue
+                break
+            except Exception:
+                time.sleep(backoff)
         if not data or not data.get("arriveeDefinitive"):
             out[rid] = []
             continue
         ordre = data.get("ordreArrivee") or []
         arrivee = [int(x[0]) if isinstance(x, list) and x else int(x) for x in ordre]
         out[rid] = arrivee
+        time.sleep(0.15)  # throttle doux pour éviter re-blocking
     return out
 
 
