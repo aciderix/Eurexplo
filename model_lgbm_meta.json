@@ -1,0 +1,245 @@
+{
+  "features": [
+    "cote_direct",
+    "cote_probable",
+    "drift_pct",
+    "odds_ratio",
+    "inv_cote_direct",
+    "inv_cote_probable",
+    "odds_rank_probable",
+    "odds_rank_direct",
+    "cote_anomaly",
+    "tendance_enc",
+    "distance",
+    "distance_bin",
+    "nb_partants",
+    "age",
+    "sexe_enc",
+    "deferre_enc",
+    "handicap_poids",
+    "day_of_week",
+    "month",
+    "horse_n_races",
+    "horse_wr",
+    "horse_podium_rate",
+    "horse_days_since_last",
+    "horse_gain_per_race",
+    "horse_wr_discipline",
+    "horse_wr_hippodrome",
+    "horse_wr_distance_bin",
+    "horse_n_hippodrome",
+    "music_avg_last_3",
+    "music_avg_last_5",
+    "music_avg_last_10",
+    "music_wins_last_5",
+    "music_podium_last_5",
+    "music_len_musique",
+    "music_discipline_consistency",
+    "jockey_n_races",
+    "jockey_wr",
+    "jockey_wr_last15",
+    "jockey_wr_last50",
+    "jockey_wr_last200",
+    "jockey_wr_hippodrome",
+    "jockey_n_hippodrome",
+    "trainer_n_races",
+    "trainer_wr",
+    "trainer_wr_last50",
+    "trainer_wr_last200",
+    "duo_n_races",
+    "duo_wr",
+    "jh_n_races",
+    "jh_wr",
+    "horse_quick_return",
+    "horse_long_break",
+    "horse_very_long_break",
+    "jockey_changed",
+    "first_at_hippodrome",
+    "first_duo",
+    "is_favorite",
+    "is_outsider",
+    "gains_vs_field_median",
+    "nb_courses",
+    "nb_victoires",
+    "gains"
+  ],
+  "categorical": [
+    "sexe_enc",
+    "deferre_enc",
+    "tendance_enc",
+    "day_of_week",
+    "month"
+  ],
+  "last_train_end": "2025-07-01",
+  "n_windows": 20,
+  "summary_by_strategy": {
+    "n_bets": {
+      "OUTSIDER_HE": 433,
+      "EXTREME_HE": 15,
+      "LOW_EDGE": 12033,
+      "CONF_HIGH": 10354,
+      "MED_EDGE": 1751,
+      "HIGH_EDGE": 121,
+      "ALL_FAVORITES": 148385
+    },
+    "win_rate": {
+      "OUTSIDER_HE": 0.0937,
+      "EXTREME_HE": 0.1188,
+      "LOW_EDGE": 0.1824,
+      "CONF_HIGH": 0.3079,
+      "MED_EDGE": 0.2079,
+      "HIGH_EDGE": 0.213,
+      "ALL_FAVORITES": 0.3218
+    },
+    "avg_odds": {
+      "OUTSIDER_HE": 12.4822,
+      "EXTREME_HE": 1.5819,
+      "LOW_EDGE": 7.3331,
+      "CONF_HIGH": 3.3136,
+      "MED_EDGE": 5.6282,
+      "HIGH_EDGE": 3.7526,
+      "ALL_FAVORITES": 3.0613
+    },
+    "avg_edge": {
+      "OUTSIDER_HE": 0.0653,
+      "EXTREME_HE": 0.0494,
+      "LOW_EDGE": 0.0351,
+      "CONF_HIGH": 0.0216,
+      "MED_EDGE": 0.0677,
+      "HIGH_EDGE": 0.1023,
+      "ALL_FAVORITES": -0.0532
+    },
+    "pnl": {
+      "OUTSIDER_HE": 162.2,
+      "EXTREME_HE": 0.8,
+      "LOW_EDGE": 476.4,
+      "CONF_HIGH": -375.8,
+      "MED_EDGE": -77.1,
+      "HIGH_EDGE": -15.2,
+      "ALL_FAVORITES": -21972.4
+    },
+    "roi": {
+      "OUTSIDER_HE": 0.1728,
+      "EXTREME_HE": 0.0744,
+      "LOW_EDGE": 0.0262,
+      "CONF_HIGH": -0.0461,
+      "MED_EDGE": -0.0529,
+      "HIGH_EDGE": -0.1067,
+      "ALL_FAVORITES": -0.1483
+    },
+    "auc": {
+      "OUTSIDER_HE": 0.8007,
+      "EXTREME_HE": 0.8007,
+      "LOW_EDGE": 0.8007,
+      "CONF_HIGH": 0.8007,
+      "MED_EDGE": 0.8007,
+      "HIGH_EDGE": 0.8007,
+      "ALL_FAVORITES": 0.8007
+    },
+    "n_windows": {
+      "OUTSIDER_HE": 20,
+      "EXTREME_HE": 20,
+      "LOW_EDGE": 20,
+      "CONF_HIGH": 20,
+      "MED_EDGE": 20,
+      "HIGH_EDGE": 20,
+      "ALL_FAVORITES": 20
+    }
+  },
+  "top_features": [
+    {
+      "feature": "cote_direct",
+      "importance": 191806.77668857574
+    },
+    {
+      "feature": "inv_cote_direct",
+      "importance": 102622.39573097229
+    },
+    {
+      "feature": "jockey_wr",
+      "importance": 2305.740493774414
+    },
+    {
+      "feature": "duo_wr",
+      "importance": 2140.2309646606445
+    },
+    {
+      "feature": "jockey_wr_hippodrome",
+      "importance": 2134.258445739746
+    },
+    {
+      "feature": "cote_probable",
+      "importance": 1807.3618450164795
+    },
+    {
+      "feature": "trainer_wr",
+      "importance": 1765.4042654037476
+    },
+    {
+      "feature": "drift_pct",
+      "importance": 1748.8772583007812
+    },
+    {
+      "feature": "horse_podium_rate",
+      "importance": 1681.9421281814575
+    },
+    {
+      "feature": "music_avg_last_10",
+      "importance": 1581.8416757583618
+    },
+    {
+      "feature": "horse_days_since_last",
+      "importance": 1504.5872554779053
+    },
+    {
+      "feature": "trainer_n_races",
+      "importance": 1503.8928270339966
+    },
+    {
+      "feature": "cote_anomaly",
+      "importance": 1481.1812343597412
+    },
+    {
+      "feature": "gains_vs_field_median",
+      "importance": 1418.6724157333374
+    },
+    {
+      "feature": "jockey_wr_last200",
+      "importance": 1298.1135444641113
+    },
+    {
+      "feature": "duo_n_races",
+      "importance": 1282.4060316085815
+    },
+    {
+      "feature": "nb_courses",
+      "importance": 1266.097191810608
+    },
+    {
+      "feature": "jockey_n_hippodrome",
+      "importance": 1263.6504669189453
+    },
+    {
+      "feature": "jockey_n_races",
+      "importance": 1217.7777252197266
+    },
+    {
+      "feature": "music_avg_last_3",
+      "importance": 1214.1442022323608
+    }
+  ],
+  "params": {
+    "objective": "binary",
+    "metric": "auc",
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_data_in_leaf": 50,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 5,
+    "lambda_l2": 0.1,
+    "verbose": -1,
+    "num_threads": 8
+  }
+}

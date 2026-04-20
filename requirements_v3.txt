@@ -1,0 +1,37 @@
+# Core
+numpy>=1.24
+pandas>=2.0
+pyarrow>=14
+scikit-learn>=1.3
+scipy>=1.11
+
+# Models
+lightgbm>=4.2
+xgboost>=2.0
+catboost>=1.2
+gensim>=4.3           # Word2Vec pour entity2vec
+
+# Optimisation
+optuna>=3.5
+# optuna-integration>=3.5   # optional, not imported in v3
+
+# Deep learning (facultatif — décommente si tu veux le Transformer sur musique)
+# torch>=2.1
+
+# Plotting / rapport
+matplotlib>=3.7
+
+# API live
+requests>=2.31
+
+# Calibration
+# (isotonic est dans sklearn)
+# beta calibration :
+betacal>=1.1          # si non dispo, on tombera en isotonic
+
+# Conformal
+# Simple implémentation maison, rien à installer de plus
+
+# Misc
+tqdm>=4.66
+joblib>=1.3

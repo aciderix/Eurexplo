@@ -7,3 +7,54 @@
 # Python
 __pycache__/
 *.pyc
+
+# PMU data cache (large, not needed in repo)
+pmu_programmes_cache/
+httpsoffline.turfinfo.api.pmu.frrestclient7programme/
+pmu_daily_json/
+pmu_full_dataset.csv
+pmu_data.csv
+
+# Large derived parquet files (regeneratable from pmu_daily_json/ or pmu_data/)
+pmu_dataset.parquet
+pmu_features.parquet
+pmu_course_raw_v2.parquet
+pmu_dataset_v2.parquet
+pmu_features_v2.parquet
+pmu_feat_*.parquet
+build_v2.log
+
+# Secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+
+# Supabase CLI temp state
+supabase/.temp/
+supabase/.branches/
+
+# Large data directories (stored in Google Drive / Storage, not git)
+pmu_data/
+pmu_data_all.zip
+pmu_data_gap.zip
+
+# Scraper logs
+scraper_async.log
+scraper_monitor.log
+
+# Model artifacts downloaded from Kaggle state dataset (regeneratable)
+outputs/
+pmu_model_v3.lgb
+pmu_model_v3.rk.lgb
+pmu_model_v3.features.json
+pmu_stack_v3.pkl
+pmu_calibrator_v3.pkl
+pmu_conformal_v3.json
+pmu_best_params_v3.json
+pmu_backtest_v3.json
+pmu_backtest_v3.csv
+pmu_bandit_v3.pkl
+pmu_bandit_report_v3.json
