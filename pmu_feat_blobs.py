@@ -86,12 +86,40 @@ def parse_rapports_definitifs(s: str | None) -> dict[int, dict]:
 
 def parse_masse_enjeu(s: str | None) -> dict[int, float]:
     """Retourne {num_pmu: part_mise_sg}.
+    Supporte deux formats:
+      - ancien scraper: list de {typePari, mises:{num: mise}}
+      - live PMU `/combinaisons/E_SIMPLE_GAGNANT`: {combinaisons:[{listeCombinaisons:[{combinaison:[num], totalEnjeu}]}]}
     ⚠ Valeur pré-course SSI le scrape est fait AVANT le départ. Sinon
        contient les mises finales (post-course).
     """
     j = _safe_json(s)
     if not j:
         return {}
+    shares: dict[int, float] = {}
+    total = 0.0
+
+    # Format live: /combinaisons/E_SIMPLE_GAGNANT
+    if isinstance(j, dict) and "combinaisons" in j:
+        for par in j.get("combinaisons", []) or []:
+            tp = par.get("pariType") or par.get("codePari") or ""
+            if "SIMPLE_GAGNANT" not in tp:
+                continue
+            for c in par.get("listeCombinaisons", []) or []:
+                comb = c.get("combinaison") or []
+                if not comb:
+                    continue
+                try:
+                    num = int(comb[0])
+                    m = float(c.get("totalEnjeu") or 0.0)
+                    shares[num] = shares.get(num, 0.0) + m
+                    total += m
+                except Exception:
+                    continue
+        if total > 0:
+            shares = {k: v / total for k, v in shares.items()}
+        return shares
+
+    # Format ancien scraper: list / {masseEnjeu: [...]}
     items = j if isinstance(j, list) else j.get("masseEnjeu", [])
     shares: dict[int, float] = {}
     total = 0.0
@@ -117,8 +145,51 @@ def parse_pronostics(s: str | None) -> dict[int, dict]:
     j = _safe_json(s)
     if not j:
         return {}
-    items = j if isinstance(j, list) else j.get("pronostics", [])
     agg: dict[int, list[int]] = defaultdict(list)
+
+    # Format live /pronostics-detailles: {avis:[{pronostics:[{numPmu,...}]}], syntheses:[...]}
+    if isinstance(j, dict) and ("avis" in j or "syntheses" in j):
+        for avis in j.get("avis", []) or []:
+            plist = avis.get("pronostics") or []
+            for rank, entry in enumerate(plist, start=1):
+                num = entry.get("numPmu") or entry.get("num") or entry.get("numParticipant")
+                try:
+                    agg[int(num)].append(rank)
+                except Exception:
+                    continue
+        # fallback: synthèse "FAVORIS" si aucun avis (ordre par nbPoints décroissant)
+        if not agg:
+            for syn in j.get("syntheses", []) or []:
+                clas = syn.get("classement") or []
+                for rank, entry in enumerate(clas, start=1):
+                    num = entry.get("numPmu") or entry.get("num")
+                    try:
+                        agg[int(num)].append(rank)
+                    except Exception:
+                        continue
+                break  # une seule synthèse suffit
+        # Format live court /pronostics: {selection:[{num_partant,rang}]}
+        if not agg:
+            for entry in j.get("selection", []) or []:
+                num = entry.get("num_partant") or entry.get("numPmu")
+                rang = entry.get("rang")
+                try:
+                    agg[int(num)].append(int(rang))
+                except Exception:
+                    continue
+        out: dict[int, dict] = {}
+        for n, ranks in agg.items():
+            out[n] = {
+                "prono_n_tips":    len(ranks),
+                "prono_rank_min":  min(ranks),
+                "prono_rank_mean": float(np.mean(ranks)),
+                "prono_top1_cnt":  sum(1 for r in ranks if r == 1),
+                "prono_top3_cnt":  sum(1 for r in ranks if r <= 3),
+            }
+        return out
+
+    # Format ancien scraper: list / {pronostics: [...]}
+    items = j if isinstance(j, list) else j.get("pronostics", [])
     for p in items:
         detail = p.get("combinaisonDetaillee") or p.get("combinaison") or []
         for rank, entry in enumerate(detail, start=1):

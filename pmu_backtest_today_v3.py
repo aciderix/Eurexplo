@@ -120,7 +120,8 @@ def fetch_course_blobs(date_str: str, race_ids: list[str]) -> dict[str, dict]:
         except Exception:
             continue
         pron  = fetch(f"{base}/pronostics-detailles", session) or fetch(f"{base}/pronostics", session)
-        mass  = fetch(f"{base}/masse-enjeu", session)
+        # Live: per-horse mises via /combinaisons/E_SIMPLE_GAGNANT (et non /masse-enjeu qui ne donne que les totaux)
+        mass  = fetch(f"{base}/combinaisons/E_SIMPLE_GAGNANT", session) or fetch(f"{base}/masse-enjeu", session)
         perfs = fetch(f"{base}/performances-detaillees/pretty", session)
         out[rid] = {
             "pronostics_json":            json.dumps(pron)  if pron  else None,
@@ -234,7 +235,8 @@ def add_v3_features(df: pd.DataFrame, blobs: dict[str, dict],
 def predict_v3(df_fe: pd.DataFrame, feat_cols: list[str], bin_m, rk_m,
                calib: dict | None, conformal: dict | None,
                alpha_meta: float) -> pd.DataFrame:
-    X = df_fe[feat_cols].apply(pd.to_numeric, errors="coerce").astype(np.float32).fillna(0.0).values
+    # LGB gère NaN nativement; fillna(0) serait un biais (0 ≠ missing pour LGB)
+    X = df_fe[feat_cols].apply(pd.to_numeric, errors="coerce").astype(np.float32).values
     p_bin = bin_m.predict(X)
     if rk_m is not None:
         s_rk = rk_m.predict(X)
