@@ -316,6 +316,8 @@ def main() -> int:
                     help="Edge min (p_cal*cote - 1) pour filtrer paris")
     ap.add_argument("--use-plo",  action="store_true",
                     help="Filter edge via p_lo (conformal lower bound) au lieu de p_cal")
+    ap.add_argument("--predict-only", action="store_true",
+                    help="Pas de fetch arrivée, juste les picks pré-course")
     args = ap.parse_args()
 
     date_str = args.date or datetime.now().strftime("%d%m%Y")
@@ -382,24 +384,31 @@ def main() -> int:
     preds = preds.merge(df_raw[["race_id", "num_pmu", "reunion_num", "course_num"]],
                         on=["race_id", "num_pmu"], how="left")
 
-    # ── Fetch ordre d'arrivée ──
-    print("\nFetch ordres d'arrivée...")
-    results = fetch_results(date_str, race_ids)
-    n_run = sum(1 for v in results.values() if v)
-    print(f"  {n_run}/{len(race_ids)} courses terminées")
+    # ── Fetch ordre d'arrivée (sauf predict-only) ──
+    if args.predict_only:
+        print("\n[predict-only] Pas de fetch d'arrivée, picks pré-course uniquement.")
+        results: dict[str, list[int]] = {}
+    else:
+        print("\nFetch ordres d'arrivée...")
+        results = fetch_results(date_str, race_ids)
+        n_run = sum(1 for v in results.values() if v)
+        print(f"  {n_run}/{len(race_ids)} courses terminées")
 
-    # ── Compare ──
+    # ── Picks / Compare ──
     print("\n" + "=" * 95)
-    print(f"{'RACE':<8} {'#':>3} {'NOM':<22} {'COTE':>5} {'p_cal':>6} {'p_lo':>6} "
-          f"{'EDGE':>6}  {'WIN#':>4} {'HIT':>4}   PnL")
+    if args.predict_only:
+        print(f"{'RACE':<8} {'#':>3} {'NOM':<22} {'COTE':>5} {'p_cal':>6} {'p_lo':>6} {'EDGE':>6}")
+    else:
+        print(f"{'RACE':<8} {'#':>3} {'NOM':<22} {'COTE':>5} {'p_cal':>6} {'p_lo':>6} "
+              f"{'EDGE':>6}  {'WIN#':>4} {'HIT':>4}   PnL")
     print("=" * 95)
 
     rows = []
     for rid, grp in preds.groupby("race_id", sort=True):
         arrivee = results.get(rid, [])
-        if not arrivee:
+        if not arrivee and not args.predict_only:
             continue
-        winner = arrivee[0]
+        winner = arrivee[0] if arrivee else None
 
         valid = grp[grp["drd_rapport"].fillna(0) > 0].copy()
         if valid.empty:
@@ -418,10 +427,26 @@ def main() -> int:
             candidates = valid
         pick = candidates.sort_values("p_cal", ascending=False).iloc[0]
 
-        hit = int(pick["num_pmu"]) == int(winner)
-        pnl = (pick["drd_rapport"] - 1.0) if hit else -1.0
         r, c = rid.split("_")[1], rid.split("_")[2]
         label = f"{r}{c}"
+
+        if args.predict_only:
+            rows.append({
+                "race": label,
+                "pick_num": int(pick["num_pmu"]),
+                "pick_nom": str(pick["nom"]),
+                "cote":    pick["drd_rapport"],
+                "p_cal":   pick["p_cal"],
+                "p_lo":    pick["p_lo"],
+                "edge":    pick["edge"],
+            })
+            print(f"{label:<8} {int(pick['num_pmu']):>3} {str(pick['nom'])[:22]:<22} "
+                  f"{float(pick['drd_rapport']):>5.1f} {float(pick['p_cal']):>6.3f} "
+                  f"{float(pick['p_lo']):>6.3f} {float(pick['edge']):>+6.3f}")
+            continue
+
+        hit = int(pick["num_pmu"]) == int(winner)
+        pnl = (pick["drd_rapport"] - 1.0) if hit else -1.0
 
         rows.append({
             "race": label,
@@ -444,6 +469,17 @@ def main() -> int:
 
     if not rows:
         print("\nAucun pari (pas de course finie, ou filtre edge trop strict).")
+        return 0
+
+    if args.predict_only:
+        r = pd.DataFrame(rows)
+        print("\n" + "=" * 95)
+        print(f"PREDICT v3 | min_edge={args.min_edge}  (use_plo={args.use_plo})")
+        print(f"  Paris      : {len(r)}")
+        print(f"  Cote moy.  : {r['cote'].mean():.2f}")
+        print(f"  p_cal moy. : {r['p_cal'].mean():.3f}")
+        print(f"  edge moy.  : {r['edge'].mean():+.3f}")
+        print("=" * 95)
         return 0
 
     r = pd.DataFrame(rows)
